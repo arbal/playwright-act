@@ -51,4 +51,34 @@ describe('takeSnapshot', () => {
       server.close();
     }
   }, 60000);
+
+  test('continues when network idle wait never resolves', async () => {
+    const { server, url } = await createTestServer('<html><body><p>Network Idle Test</p></body></html>');
+    const warnings = [];
+
+    try {
+      const result = await takeSnapshot(`${url}/`, {
+        archiveRoot: archiveDir,
+        timestamp: '2024-01-01T00-00-01Z',
+        logger: { warn: (message) => warnings.push(message) },
+        networkIdleTimeout: 5,
+        additionalWaitMs: 0,
+        onPageReady: async (page) => {
+          const originalWaitForLoadState = page.waitForLoadState.bind(page);
+          page.waitForLoadState = async (state, opts) => {
+            if (state === 'networkidle') {
+              throw new Error('Simulated network idle timeout');
+            }
+            return originalWaitForLoadState(state, opts);
+          };
+        },
+      });
+
+      expect(fs.existsSync(result.htmlPath)).toBe(true);
+      expect(fs.existsSync(result.textPath)).toBe(true);
+      expect(warnings.some((message) => message.includes('network idle'))).toBe(true);
+    } finally {
+      server.close();
+    }
+  }, 60000);
 });

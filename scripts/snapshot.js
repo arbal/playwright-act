@@ -41,6 +41,37 @@ function ensureUniqueDir(baseDir, baseName) {
   return { snapshotDirName, snapshotDirPath };
 }
 
+function resolveLogger(logger) {
+  if (logger && typeof logger.warn === 'function') {
+    return logger;
+  }
+  return {
+    warn: (message) => {
+      console.warn(message);
+    },
+  };
+}
+
+async function waitForPageSettled(page, options = {}) {
+  const logger = resolveLogger(options.logger);
+  const networkIdleTimeout =
+    options.networkIdleTimeout === undefined ? 10000 : options.networkIdleTimeout;
+  const additionalWaitMs =
+    options.additionalWaitMs === undefined ? 1500 : options.additionalWaitMs;
+
+  if (networkIdleTimeout && networkIdleTimeout > 0) {
+    try {
+      await page.waitForLoadState('networkidle', { timeout: networkIdleTimeout });
+    } catch (error) {
+      logger.warn(`Continuing without network idle: ${error.message}`);
+    }
+  }
+
+  if (additionalWaitMs && additionalWaitMs > 0) {
+    await page.waitForTimeout(additionalWaitMs);
+  }
+}
+
 async function takeSnapshot(targetUrl, options = {}) {
   validateUrl(targetUrl);
 
@@ -49,16 +80,29 @@ async function takeSnapshot(targetUrl, options = {}) {
   const { snapshotDirName, snapshotDirPath } = ensureUniqueDir(archiveRoot, timestampBase);
 
   const browserLauncher = options.browserLauncher || chromium;
+  const launchOptions = {
+    headless: true,
+    args: ['--no-sandbox', '--disable-dev-shm-usage'],
+    ...(options.browserLaunchOptions || {}),
+  };
   let browser;
 
   try {
-    browser = await browserLauncher.launch();
+    browser = await browserLauncher.launch(launchOptions);
     const context = await browser.newContext();
     const page = await context.newPage();
 
+    if (typeof options.onPageReady === 'function') {
+      await options.onPageReady(page);
+    }
+
+    const navigationTimeout = options.navigationTimeout === undefined ? 60000 : options.navigationTimeout;
     let response;
     try {
-      response = await page.goto(targetUrl, { waitUntil: 'networkidle', timeout: 60000 });
+      response = await page.goto(targetUrl, {
+        waitUntil: options.waitUntil || 'domcontentloaded',
+        timeout: navigationTimeout,
+      });
     } catch (error) {
       throw new Error(`Navigation failed: ${error.message}`);
     }
@@ -71,6 +115,8 @@ async function takeSnapshot(targetUrl, options = {}) {
     if (status < 200 || status >= 400) {
       throw new Error(`Navigation failed: received HTTP status ${status}.`);
     }
+
+    await waitForPageSettled(page, options);
 
     const html = await page.content();
     const textContent = await page.evaluate(() => {
@@ -106,7 +152,9 @@ async function main() {
     const targetUrl = process.argv[2];
     const result = await takeSnapshot(targetUrl);
 
-    console.log(`Snapshot saved to:\n- ${path.relative(process.cwd(), result.htmlPath)}\n- ${path.relative(process.cwd(), result.textPath)}`);
+    console.log(
+      `Snapshot saved to:\n- ${path.relative(process.cwd(), result.htmlPath)}\n- ${path.relative(process.cwd(), result.textPath)}`
+    );
 
     if (process.env.GITHUB_OUTPUT) {
       fs.appendFileSync(process.env.GITHUB_OUTPUT, `snapshot_timestamp=${result.timestamp}\n`);
