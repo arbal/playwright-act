@@ -37,6 +37,8 @@ jobs:
           node-version: '20'
       - name: Install dependencies
         run: npm ci
+      - name: Install Playwright browser
+        run: npx playwright install --with-deps chromium
       - name: Capture snapshot
         id: snapshot
         env:
