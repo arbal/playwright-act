@@ -1,0 +1,1392 @@
+<!DOCTYPE html><html lang="en"><head><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/destination?id=G-XXXXXXXXXX&amp;cx=c&amp;gtm=4e5ar0"></script><script type="text/javascript" async="" src="https://cdn.hadronid.net/hadron.js?partner_id=474&amp;_it=prebid"></script><script src="https://rules.quantcount.com/rules-p-UeXruRVtZz7w6.js" async=""></script><script src="https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202510210101/pubads_impl_page_level_ads.js"></script><script src="https://cdn.hadronid.net/hadron.js?url=https%3A%2F%2Fmyhockeyrankings.com%2Fdivision-info%3Fd%3D1665%26y%3D2025&amp;ref=&amp;_it=freestar&amp;partner_id=474&amp;ha=_hadron"></script><script src="https://btloader.com/tag?o=5714937848528896&amp;upapi=true"></script><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
+<!-- InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
+<script async="" src="//c.amazon-adsystem.com/aax2/apstag.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/plugins/ua/ec.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" type="text/javascript" src="https://cmp.inmobi.com/tcfv2/cmp2.js?referer=myhockeyrankings.com"></script><script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/cLm1zuaUXPLFw7nzKiQTH1dX/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-gUsoa0ra1Yy2gCgxtSiWVwd5FE8xBoMfoQotRIQrq+2UghRpxqxvq3SVJvG+KkRE"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-2QBPG3KR96&amp;cx=c&amp;gtm=4e5ar0"></script><script async="" type="text/javascript" src="https://cmp.inmobi.com/choice/X70W-gya10Q6h/myhockeyrankings.com/choice.js?tag_version=V3"></script><script type="text/javascript" async="true">
+(function() {
+  var host = 'myhockeyrankings.com';
+  var element = document.createElement('script');
+  var firstScript = document.getElementsByTagName('script')[0];
+  var url = 'https://cmp.inmobi.com'
+    .concat('/choice/', 'X70W-gya10Q6h', '/', host, '/choice.js?tag_version=V3');
+  var uspTries = 0;
+  var uspTriesLimit = 3;
+  element.async = true;
+  element.type = 'text/javascript';
+  element.src = url;
+
+  firstScript.parentNode.insertBefore(element, firstScript);
+
+  function makeStub() {
+    var TCF_LOCATOR_NAME = '__tcfapiLocator';
+    var queue = [];
+    var win = window;
+    var cmpFrame;
+
+    function addFrame() {
+      var doc = win.document;
+      var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+
+      if (!otherCMP) {
+        if (doc.body) {
+          var iframe = doc.createElement('iframe');
+
+          iframe.style.cssText = 'display:none';
+          iframe.name = TCF_LOCATOR_NAME;
+          doc.body.appendChild(iframe);
+        } else {
+          setTimeout(addFrame, 5);
+        }
+      }
+      return !otherCMP;
+    }
+
+    function tcfAPIHandler() {
+      var gdprApplies;
+      var args = arguments;
+
+      if (!args.length) {
+        return queue;
+      } else if (args[0] === 'setGdprApplies') {
+        if (
+          args.length > 3 &&
+          args[2] === 2 &&
+          typeof args[3] === 'boolean'
+        ) {
+          gdprApplies = args[3];
+          if (typeof args[2] === 'function') {
+            args[2]('set', true);
+          }
+        }
+      } else if (args[0] === 'ping') {
+        var retr = {
+          gdprApplies: gdprApplies,
+          cmpLoaded: false,
+          cmpStatus: 'stub'
+        };
+
+        if (typeof args[2] === 'function') {
+          args[2](retr);
+        }
+      } else {
+        if(args[0] === 'init' && typeof args[3] === 'object') {
+          args[3] = Object.assign(args[3], { tag_version: 'V3' });
+        }
+        queue.push(args);
+      }
+    }
+
+    function postMessageEventHandler(event) {
+      var msgIsString = typeof event.data === 'string';
+      var json = {};
+
+      try {
+        if (msgIsString) {
+          json = JSON.parse(event.data);
+        } else {
+          json = event.data;
+        }
+      } catch (ignore) {}
+
+      var payload = json.__tcfapiCall;
+
+      if (payload) {
+        window.__tcfapi(
+          payload.command,
+          payload.version,
+          function(retValue, success) {
+            var returnMsg = {
+              __tcfapiReturn: {
+                returnValue: retValue,
+                success: success,
+                callId: payload.callId
+              }
+            };
+            if (msgIsString) {
+              returnMsg = JSON.stringify(returnMsg);
+            }
+            if (event && event.source && event.source.postMessage) {
+              event.source.postMessage(returnMsg, '*');
+            }
+          },
+          payload.parameter
+        );
+      }
+    }
+
+    while (win) {
+      try {
+        if (win.frames[TCF_LOCATOR_NAME]) {
+          cmpFrame = win;
+          break;
+        }
+      } catch (ignore) {}
+
+      if (win === window.top) {
+        break;
+      }
+      win = win.parent;
+    }
+    if (!cmpFrame) {
+      addFrame();
+      win.__tcfapi = tcfAPIHandler;
+      win.addEventListener('message', postMessageEventHandler, false);
+    }
+  };
+
+  makeStub();
+
+  var uspStubFunction = function() {
+    var arg = arguments;
+    if (typeof window.__uspapi !== uspStubFunction) {
+      setTimeout(function() {
+        if (typeof window.__uspapi !== 'undefined') {
+          window.__uspapi.apply(window.__uspapi, arg);
+        }
+      }, 500);
+    }
+  };
+
+  var checkIfUspIsReady = function() {
+    uspTries++;
+    if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+      console.warn('USP is not accessible');
+    } else {
+      clearInterval(uspInterval);
+    }
+  };
+
+  if (typeof window.__uspapi === 'undefined') {
+    window.__uspapi = uspStubFunction;
+    var uspInterval = setInterval(checkIfUspIsReady, 6000);
+  }
+})();
+</script>
+<!-- End InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
+<base href="/">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="keywords" content="MYHockey,AAA,hockey,youth,midwest,rank,rankings,ratings,lists,listings,teams,associations,
+  best,leagues,games,scores,record,travel,USA,Ontario,Canada,squirt,peewee,bantam,midget,college,junior,nhl,equipment,
+  schools,programs,club,clubs,blog,hockey nerd,opinion,tournaments,USAHockey,USA Hockey">
+<meta name="referrer" content="https://myhockeyrankings.com">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-404905-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-404905-1');
+</script>
+
+<!-- Google tag (gtag.js) - Google Analytics V4 -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2QBPG3KR96"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2QBPG3KR96');
+</script>
+<!-- Freestar -->
+<!-- Below is a link to a CSS file that accounts for Cumulative Layout Shift, a new Core Web Vitals subset that Google uses to help rank your site in search -->
+<!-- The file is intended to eliminate the layout shifts that are seen when ads load into the page. If you don't want to use this, simply remove this file -->
+<!-- To find out more about CLS, visit https://web.dev/vitals/ -->
+<link rel="stylesheet" href="https://a.pub.network/core/pubfig/cls.css">
+<script data-cfasync="false" type="text/javascript">
+  var freestar = freestar || {};
+  freestar.queue = freestar.queue || [];
+  freestar.config = freestar.config || {};
+  freestar.config.enabled_slots = [];
+  freestar.initCallback = function () { (freestar.config.enabled_slots.length === 0) ? freestar.initCallbackCalled = false : freestar.newAdSlots(freestar.config.enabled_slots) }
+</script>
+<script src="https://a.pub.network/myhockeyrankings-com/pubfig.min.js" async=""></script>
+<!-- -->
+<script type="text/javascript" src="js/MHRAds.js?v=5.4.000"></script>
+<script>
+    MHRAds.ads = [
+    {
+        "name": "Sparx",
+        "url": "https:\/\/www.sparxhockey.com\/",
+        "freq": 1,
+        "slot": "banner",
+        "img": "images\/ads\/sparx_2025_320x50.png",
+        "height": 50,
+        "width": 320
+    },
+    {
+        "name": "Sparx",
+        "url": "https:\/\/www.sparxhockey.com\/",
+        "freq": 1,
+        "slot": "banner",
+        "img": "images\/ads\/sparx_2025_468x60.png",
+        "height": 60,
+        "width": 468
+    },
+    {
+        "name": "Sparx",
+        "url": "https:\/\/www.sparxhockey.com\/",
+        "freq": 1,
+        "slot": "banner",
+        "img": "images\/ads\/sparx_2025_728x90.png",
+        "height": 90,
+        "width": 728
+    },
+    {
+        "name": "MYHockey Tournaments",
+        "url": "https:\/\/myhockeytournaments.com\/mhr2.php",
+        "freq": 1,
+        "slot": "banner",
+        "img": "images\/ads\/mht_2025e_320x50.gif",
+        "height": 50,
+        "width": 320
+    },
+    {
+        "name": "MYHockey Tournaments",
+        "url": "https:\/\/myhockeytournaments.com\/mhr2.php",
+        "freq": 1,
+        "slot": "banner",
+        "img": "images\/ads\/mht_2025e_468x60.gif",
+        "height": 60,
+        "width": 468
+    },
+    {
+        "name": "MYHockey Tournaments",
+        "url": "https:\/\/myhockeytournaments.com\/mhr2.php",
+        "freq": 1,
+        "slot": "banner",
+        "img": "images\/ads\/mht_2025e_728x90.gif",
+        "height": 90,
+        "width": 728
+    },
+    {
+        "name": "Sense Arena",
+        "url": "https:\/\/hockey.sensearena.com\/?utm_source=mhr&utm_medium=banner&utm_campaign=september25&utm_content=mhr",
+        "freq": 1,
+        "slot": "banner",
+        "img": "images\/ads\/sensearena_2025c_320x50.png",
+        "height": 50,
+        "width": 320
+    },
+    {
+        "name": "Sense Arena",
+        "url": "https:\/\/hockey.sensearena.com\/?utm_source=mhr&utm_medium=banner&utm_campaign=september25&utm_content=mhr",
+        "freq": 1,
+        "slot": "banner",
+        "img": "images\/ads\/sensearena_2025c_468x60.png",
+        "height": 60,
+        "width": 468
+    },
+    {
+        "name": "Sense Arena",
+        "url": "https:\/\/hockey.sensearena.com\/?utm_source=mhr&utm_medium=banner&utm_campaign=september25&utm_content=mhr",
+        "freq": 1,
+        "slot": "banner",
+        "img": "images\/ads\/sensearena_2025c_728x90.png",
+        "height": 90,
+        "width": 728
+    },
+    {
+        "name": "Gamesheet",
+        "url": "https:\/\/gamesheetinc.lpages.co\/teamapp-beta\/?utm_source=myhockeyrankings.com&utm_medium=banner320&utm_campaign=mhr_display_ads&utm_content=gs_banner_320x50_1",
+        "freq": 1,
+        "slot": "in-context",
+        "img": "images\/ads\/gamesheet_a_320x50.png",
+        "height": 50,
+        "width": 320
+    },
+    {
+        "name": "Gamesheet",
+        "url": "https:\/\/gamesheetinc.lpages.co\/teamapp-beta\/?utm_source=myhockeyrankings.com&utm_medium=banner468&utm_campaign=mhr_display_ads&utm_content=gs_banner_468x60_1",
+        "freq": 1,
+        "slot": "in-context",
+        "img": "images\/ads\/gamesheet_a_468x60.png",
+        "height": 60,
+        "width": 468
+    },
+    {
+        "name": "Gamesheet",
+        "url": "https:\/\/gamesheetinc.lpages.co\/teamapp-beta\/?utm_source=myhockeyrankings.com&utm_medium=banner728&utm_campaign=mhr_display_ads&utm_content=gs_banner_728x90_1",
+        "freq": 1,
+        "slot": "in-context",
+        "img": "images\/ads\/gamesheet_a_728x90.png",
+        "height": 90,
+        "width": 728
+    },
+    {
+        "name": "Crossbar",
+        "url": "https:\/\/www.crossbar.org\/platform\/clubs\/hockey?utm_source=mhr&utm_medium=banner&utm_campaign=mhr_branding&utm_content=320x50",
+        "freq": 1,
+        "slot": "in-context",
+        "img": "images\/ads\/crossbar3_320x50.png",
+        "height": 50,
+        "width": 320
+    },
+    {
+        "name": "Crossbar",
+        "url": "https:\/\/www.crossbar.org\/platform\/clubs\/hockey?utm_source=mhr&utm_medium=banner&utm_campaign=mhr_branding&utm_content=468x60",
+        "freq": 1,
+        "slot": "in-context",
+        "img": "images\/ads\/crossbar3_468x60.png",
+        "height": 60,
+        "width": 468
+    },
+    {
+        "name": "Crossbar",
+        "url": "https:\/\/www.crossbar.org\/platform\/clubs\/hockey?utm_source=mhr&utm_medium=banner&utm_campaign=mhr_branding&utm_content=728x90",
+        "freq": 1,
+        "slot": "in-context",
+        "img": "images\/ads\/crossbar3_728x90.png",
+        "height": 90,
+        "width": 728
+    },
+    {
+        "name": "Crossbar",
+        "url": "https:\/\/www.crossbar.org\/platform\/clubs\/hockey?utm_source=mhr&utm_medium=banner&utm_campaign=mhr_branding&utm_content=300x250",
+        "freq": 1,
+        "slot": "member-landing-page",
+        "img": "images\/ads\/crossbar3_300x250.png",
+        "height": 250,
+        "width": 300
+    },
+    {
+        "name": "NAHL",
+        "url": "https:\/\/nahl.com",
+        "freq": 1,
+        "slot": "banner",
+        "img": "images\/ads\/NAHL_2025c_320x50.jpg",
+        "height": 50,
+        "width": 320
+    },
+    {
+        "name": "NAHL",
+        "url": "https:\/\/nahl.com",
+        "freq": 1,
+        "slot": "banner",
+        "img": "images\/ads\/NAHL_2025c_468x60.jpg",
+        "height": 60,
+        "width": 468
+    },
+    {
+        "name": "NAHL",
+        "url": "https:\/\/nahl.com",
+        "freq": 1,
+        "slot": "banner",
+        "img": "images\/ads\/NAHL_2025c_728x90.jpg",
+        "height": 90,
+        "width": 728
+    },
+    {
+        "name": "NAHL",
+        "url": "https:\/\/nahl.com",
+        "freq": 1,
+        "slot": "in-context",
+        "img": "images\/ads\/NAHL_2025c_320x50.jpg",
+        "height": 50,
+        "width": 320
+    },
+    {
+        "name": "NAHL",
+        "url": "https:\/\/nahl.com",
+        "freq": 1,
+        "slot": "in-context",
+        "img": "images\/ads\/NAHL_2025c_468x60.jpg",
+        "height": 60,
+        "width": 468
+    },
+    {
+        "name": "NAHL",
+        "url": "https:\/\/nahl.com",
+        "freq": 1,
+        "slot": "in-context",
+        "img": "images\/ads\/NAHL_2025c_728x90.jpg",
+        "height": 90,
+        "width": 728
+    },
+    {
+        "name": "LiveBarn",
+        "url": "https:\/\/www.livebarn.com\/player-analysis-hub",
+        "freq": 1,
+        "slot": "banner",
+        "img": "images\/ads\/livebarn_b_320x50.png",
+        "height": 50,
+        "width": 320
+    },
+    {
+        "name": "LiveBarn",
+        "url": "https:\/\/www.livebarn.com\/player-analysis-hub",
+        "freq": 1,
+        "slot": "banner",
+        "img": "images\/ads\/livebarn_b_468x60.png",
+        "height": 60,
+        "width": 468
+    },
+    {
+        "name": "LiveBarn",
+        "url": "https:\/\/www.livebarn.com\/player-analysis-hub",
+        "freq": 1,
+        "slot": "banner",
+        "img": "images\/ads\/livebarn_b_728x90.png",
+        "height": 90,
+        "width": 728
+    },
+    {
+        "name": "LiveBarn",
+        "url": "https:\/\/www.livebarn.com\/player-analysis-hub",
+        "freq": 1,
+        "slot": "in-context",
+        "img": "images\/ads\/livebarn_b_320x50.png",
+        "height": 50,
+        "width": 320
+    },
+    {
+        "name": "LiveBarn",
+        "url": "https:\/\/www.livebarn.com\/player-analysis-hub",
+        "freq": 1,
+        "slot": "in-context",
+        "img": "images\/ads\/livebarn_b_468x60.png",
+        "height": 60,
+        "width": 468
+    },
+    {
+        "name": "LiveBarn",
+        "url": "https:\/\/www.livebarn.com\/player-analysis-hub",
+        "freq": 1,
+        "slot": "in-context",
+        "img": "images\/ads\/livebarn_b_728x90.png",
+        "height": 90,
+        "width": 728
+    },
+    {
+        "name": "Rankings Powered By: Gamesheet",
+        "url": "https:\/\/gamesheetinc.com?utm_source=myhockeyrankings.com&utm_medium=banner365&utm_campaign=rankings_powered_by&utm_content=gs_banner_365x140_poweredby",
+        "freq": 1,
+        "slot": "rankings-powered-by",
+        "img": "images\/ads\/gs_banner_365x40_poweredby.png",
+        "height": 140,
+        "width": 365
+    },
+    {
+        "name": "Rankings Powered By: Gamesheet",
+        "url": "https:\/\/gamesheetinc.com?utm_source=myhockeyrankings.com&utm_medium=banner640&utm_campaign=rankings_powered_by&utm_content=gs_banner_640x140_poweredby",
+        "freq": 1,
+        "slot": "rankings-powered-by",
+        "img": "images\/ads\/gs_banner_640x140_poweredby.png",
+        "height": 140,
+        "width": 640
+    },
+    {
+        "slot": "banner",
+        "name": "freestar",
+        "freq": 2
+    },
+    {
+        "slot": "in-context",
+        "name": "freestar",
+        "freq": 2
+    }
+];
+    MHRAds.init();
+</script>
+<!-- Google Maps -->
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyCrRTxVXJ9Yl7_YMdlrv8GrUZqQBatRqo8"></script>
+
+<link rel="stylesheet" type="text/css" href="css/modal.css?v=5.4.000">
+<link rel="stylesheet" href="/css/stats-manager.css?v=5.4.000"> 
+
+<!-- ReCaptcha -->
+<script src="https://www.google.com/recaptcha/api.js"></script>
+
+<!-- Fonts -->
+<link rel="stylesheet" href="/css/mhr-fonts.css?v=5.4.000">
+<!-- Inter -->
+<link rel="stylesheet" href="/fonts/inter/inter.css?v=5.4.000">
+
+<!-- Tour -->
+<link rel="stylesheet" href="/css/mhr-tour.css?v=5.4.000">
+
+<!-- Stats Styles -->
+<link rel="stylesheet" href="/css/table-editor.css?v=5.4.000">
+
+<!-- rt-cookie-banner -->
+<link rel="stylesheet" href="/css/rt_cookie_banner.css?v=5.4.000">
+
+<link rel="stylesheet" href="/js/franken-ui/1.1.0/core.min.css">
+<link rel="stylesheet" type="text/css" href="/css/mhr-v4.compat.css?v=5.4.000">
+<link rel="stylesheet" type="text/css" href="/css/mhr-v5.css?v=5.4.000">
+<link rel="stylesheet" type="text/css" href="/css/mhr-v5.iife.css?v=5.4.000">
+<script src="/js/mhr-v5.iife.js?v=5.4.000"></script>
+<script src="/js/franken-ui/1.1.0/core.iife.js" type="module"></script>
+<script src="/js/franken-ui/1.1.0/icon.iife.js" type="module"></script>
+<style>
+    .uk-table th {
+        text-align: unset !important;
+        font-size: unset !important;
+    }
+    .uk-table-small td, .uk-table-small th {
+        padding: 0.25rem !important;
+    }
+    .uk-table tfoot {
+        font-size: unset;
+    }
+</style>
+<title>SCAHA 12U  A - Division Information - MYHockey</title>
+<style type="text/css"> .qc-cmp-button.qc-cmp-secondary-button:hover {    background-color: #368bd6 !important;    border-color: transparent !important;  }  .qc-cmp-button.qc-cmp-secondary-button:hover {    color: #ffffff !important;  }  .qc-cmp-button.qc-cmp-secondary-button {    color: #368bd6 !important;  }  .qc-cmp-button.qc-cmp-secondary-button {    background-color: #eee !important;    border-color: transparent !important;  } </style><script src="https://a.pub.network/myhockeyrankings-com/prebid.js" data-owner="freestar" async="" type="text/javascript"></script><script src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" data-owner="freestar" async="" type="text/javascript"></script><script src="https://a.pub.network/myhockeyrankings-com/pubfig.engine.js" data-owner="freestar" async="" type="text/javascript"></script><meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A9nrunKdU5m96PSN1XsSGr3qOP0lvPFUB2AiAylCDlN5DTl17uDFkpQuHj1AFtgWLxpLaiBZuhrtb2WOu7ofHwEAAACKeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A93bovR+QVXNx2/38qDbmeYYf1wdte9EO37K9eMq3r+541qo0byhYU899BhPB7Cv9QqD7wIbR1B6OAc9kEfYCA4AAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A1S5fojrAunSDrFbD8OfGmFHdRFZymSM/1ss3G+NEttCLfHkXvlcF6LGLH8Mo5PakLO1sCASXU1/gQf6XGuTBgwAAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><script src="https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202510210101/pubads_impl.js" async=""></script><link href="https://securepubads.g.doubleclick.net/pagead/managed/dict/m202510140101/gpt" rel="compression-dictionary"><style>.fs-sticky-footer{bottom:0;display:block;display:-webkit-box;display:-ms-flexbox;display:flex;position:fixed;right:0;width:100vw;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;z-index:2147483647}.fs-sticky-slot-element>div>iframe{margin:0!important}.fs-sticky-slot-element>div{position:relative}.fs-sticky-parent{bottom:0;left:0;padding-top:0;position:fixed;right:0;text-align:center;z-index:2147483647}.fs-sticky-wrapper{margin:auto}.fs-dynamic{clear:both;text-align:center}.fs-iai{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;clear:both}.fs-iai-sticky{-webkit-box-align:top;-ms-flex-align:top;align-items:top}.fs-iai-sticky>div{position:sticky;-ms-flex-item-align:start;align-self:flex-start}.fs-close-button{all:unset;-moz-appearance:none!important;-webkit-appearance:none!important;appearance:none!important;background-color:#fff!important;background-image:url(https://a.pub.network/core/imgs/freestar_close_button.svg)!important;background-position:50%!important;background-repeat:no-repeat!important;border:none!important;border-radius:50%!important;-webkit-box-shadow:0 0 0 1px #888,0 0 0 1px #f7f7f7bf!important;box-shadow:0 0 0 1px #888,0 0 0 1px #f7f7f7bf!important;-webkit-box-sizing:border-box!important;box-sizing:border-box!important;cursor:pointer!important;display:block!important;height:20px!important;outline:none!important;padding:0!important;position:absolute!important;right:25px!important;top:25px!important;-webkit-transition:all .3s ease-in-out!important;transition:all .3s ease-in-out!important;width:20px!important}.fs-close-button:focus,.fs-close-button:hover{background-color:#000!important}.fs-sticky-popup-container{-webkit-filter:drop-shadow(2px 2px 2px grey);filter:drop-shadow(2px 2px 2px grey);font-family:arial;font-size:.8em;height:auto;padding:7px;text-align:center;white-space:nowrap;width:auto;z-index:2147483647!important}.fs-sticky-popup-container a:nth-child(2){border-top:1px solid #999}.fs-sticky-popup-container .fs-report-ad-button{color:#999}.fs-close-button:hover{-webkit-box-shadow:0 0 0 1px #888,0 0 0 8px #f7f7f7bf;box-shadow:0 0 0 1px #888,0 0 0 8px #f7f7f7bf}.fs-close-button-pushdown{right:12px!important;top:12px!important}@media screen and (min-width:820px){.fs-close-button-sticky{right:10px!important;top:9.3%!important}}@media screen and (max-width:820px){.fs-close-button-sticky{right:10px!important;top:3px!important}.fs-close-button-pushdown{right:0!important;top:0!important}}.fs-branding-spacer{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.fs-report-ad-button{background:none;color:#000;font-size:12px;-webkit-text-decoration:none;text-decoration:none}.fs-report-ad-button,.fs-report-ad-button-icon{border:none;cursor:pointer;display:block;padding:0}.fs-report-ad-button-icon{background-color:initial;background-image:url(https://a.pub.network/core/imgs/freestar_report_ad_icon.png);background-size:18px;content:"";moz-appearance:none;-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:#fff;background-position:50%;background-repeat:no-repeat;border-radius:50%;-webkit-box-sizing:border-box;box-sizing:border-box;height:16px;outline:none;width:16px}.fs-pushdown{width:100%}.fs-pushdown,.fs-pushdown-sticky{background-color:#f7f7f7e6;display:-webkit-box;display:-ms-flexbox;display:flex;text-align:center;top:0;z-index:2147483647;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.fs-pushdown-sticky{left:0!important;position:sticky!important}.__fs-ancillary{--childHeight:16px;display:-webkit-box;display:-ms-flexbox;width:var(--childWidth,100%);-webkit-box-align:center;-ms-flex-align:center;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;margin:0 auto;position:relative;-webkit-box-ordinal-group:1000;-ms-flex-order:999;align-items:center;display:flex;height:16px;height:var(--childHeight,16px);order:999;width:100%;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.__fs-ancillary>div>.__fs-branding{-webkit-box-flex:20;-ms-flex-positive:20;flex-grow:20}.fs-sticky-wrapper .__fs-ancillary{display:none!important}.__fs-branding{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.__fs-branding>a{display:block;height:var(--childHeight);max-width:var(--childWidth);width:100%}.__fs-branding>a>img{-webkit-box-shadow:none;box-shadow:none;display:block;height:calc(var(--childHeight) - 2px)!important;margin:0 auto 0 0!important;width:auto!important}.fs-sticky-wrapper .__fs-branding{border:none;border-radius:50%;height:30px;position:absolute;right:6px;top:0;top:50%;width:30px}.fs-mobile-tall{top:30%!important}.fs-sticky-wrapper .__fs-branding>a{display:-webkit-box;display:-ms-flexbox;display:flex;height:100%;width:100%;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.fs-sticky-wrapper .__fs-branding>a>img{height:100%!important;opacity:1;width:100%!important}@media screen and (max-width:820px){.fs-sticky-wrapper .__fs-branding>a>img{height:70%!important;opacity:1;width:70%!important}}.fs-sticky-wrapper .__fs-branding{background-color:#f7f7f7bf;background-size:58%}.fs-sticky-wrapper .__fs-branding>a>img{height:90%;width:90%}.fs-sticky-wrapper{background-color:#f6f3f3;display:inline-block;padding-right:38px;visibility:inherit;width:-webkit-fit-content;width:-moz-fit-content;width:fit-content;z-index:inherit}.center-ad{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}._wrapper .orp-player-wrapper{height:100%!important;width:100%!important}</style><style>.fs-flying-carpet{background:-webkit-gradient(linear,left top,left bottom,color-stop(10%,#00c389),to(#000));background:linear-gradient(180deg,#00c389 10%,#000);-webkit-box-shadow:0 4px 8px #0000001a;box-shadow:0 4px 8px #0000001a;height:175vh;margin:0 -1.1rem .5rem;position:relative}.fs-flying-carpet-ad-container{margin:0 auto;position:sticky;top:0;-ms-flex-item-align:center;align-self:center;bottom:10vh;padding-bottom:10vh;padding-top:10vh}.fs-flying-carpet-ad-container,.fs-powered-by{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.fs-powered-by{background-color:#000;bottom:0;color:#00c389;font-size:18px;height:6vh;padding:10px 0;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.fs-flying-carpet-header,.fs-powered-by{-webkit-box-shadow:0 -2px 4px #0000001a;box-shadow:0 -2px 4px #0000001a;position:absolute;text-align:center;width:100%}.fs-flying-carpet-header{background-color:#34495e;color:#fff;font-family:Arial,Helvetica,sans-serif!important;font-size:11px;padding:5px 0;top:0}.fs-flying-carpet-v2{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.fs-flying-carpet-v2,.fs-flying-carpet-v2-ad-container{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.fs-flying-carpet-v2-ad-container{-webkit-box-pack:center;-ms-flex-pack:center;background-color:#fff;-webkit-box-sizing:border-box;box-sizing:border-box;height:65vh;justify-content:center;margin-left:auto;margin-right:auto;overflow-x:hidden;overflow-y:scroll;width:300px}.fs-flying-carpet-v2-text-border{background-color:#333;color:#fff;font-family:Arial,sans-serif;font-size:.8em;letter-spacing:1px;padding:5px 0;text-align:center;text-transform:uppercase;width:100%}.fs-flying-carpet-v3{display:-webkit-box;display:-ms-flexbox;display:flex;margin:0 auto;position:relative;width:300px;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;padding:5px 0}.fs-flying-carpet-v3-text-border{background-color:#333;color:#fff;font-family:Arial,sans-serif;font-size:.8em;left:50%;letter-spacing:1px;margin-left:-50vw;padding:5px 0;position:relative;text-align:center;text-transform:uppercase;width:100vw}.fs-flying-carpet-v3-container{position:sticky;top:0;-webkit-transition:opacity .3s ease;transition:opacity .3s ease;z-index:0}.fs-flying-carpet-v3-content{height:500px;position:relative;width:300px}.fs-flying-carpet-v3-slot-wrapper{clip-path:inset(0);-webkit-clip-path:inset(0);height:500px;overflow:hidden;position:absolute;width:300px}.fs-flying-carpet-v3-slot{-webkit-backface-visibility:hidden;backface-visibility:hidden;left:50%;-o-object-fit:contain;object-fit:contain;-o-object-position:top;object-position:top;position:fixed;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);width:300px;z-index:-9999}</style><style>.fs-test-mode-label{background-color:#000000a6;border-radius:5px 0 0 5px;bottom:40%;color:#fff;display:-webkit-box;display:-ms-flexbox;display:flex;font-family:monospace;position:fixed;right:0;-webkit-transform:translateX(calc(100% - 25px));transform:translateX(calc(100% - 25px));-webkit-transform-origin:left top;transform-origin:left top;-webkit-transition:background-color .3s ease-in,-webkit-transform .3s ease-in;transition:background-color .3s ease-in,-webkit-transform .3s ease-in;transition:transform .3s ease-in,background-color .3s ease-in;transition:transform .3s ease-in,background-color .3s ease-in,-webkit-transform .3s ease-in;z-index:2147483647}.fs-test-mode-label>span:first-of-type{border-right:1px solid #03c38b;cursor:pointer;display:-webkit-box;display:-ms-flexbox;display:flex;padding:5px;-webkit-writing-mode:tb-rl;-ms-writing-mode:tb-rl;writing-mode:tb-rl}.fs-test-mode-label>span:first-of-type>img{margin-top:5px;width:17px}.fs-test-mode-label>div>button{background-color:#03c38b;border:none;border-radius:5px;color:#fff;cursor:pointer;font-family:monospace;padding:5px 10px}.fs-test-mode-label>div{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;gap:10px;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin:0 5px}.fs-test-mode-label>input[type=checkbox]{height:0;visibility:hidden;width:0}.fs-test-mode-label:has(input[type=checkbox]:checked){background-color:#000c;-webkit-transform:translateX(0);transform:translateX(0)}@media only screen and (max-width:450px){.fs-test-mode-label{-webkit-transform:translateX(calc(100% - 30px));transform:translateX(calc(100% - 30px))}.fs-test-mode-label>span:first-of-type{font-size:18px;padding:7px 5px}.fs-test-mode-label>span:first-of-type>img{width:20px}}</style><script src="https://freestar.solutions.cdn.optable.co/public-assets/freestar-sdk.js" data-owner="freestar" async="" type="text/javascript"></script><script src="https://config.aps.amazon-adsystem.com/configs/0ab198dd-b265-462a-ae36-74e163ad6159" type="text/javascript" async="async"></script><script src="//secure.cdn.fastclick.net/js/pubcid/latest/pubcid.min.js"></script><script src="https://tags.crwdcntrl.net/lt/c/16576/sync.min.js"></script><script src="https://cdn-ima.33across.com/ima.js"></script><script src="//cdn.id5-sync.com/api/1.0/id5-api.js"></script><script src="https://scripts.mf.webcontentassessor.com/scripts/b16dc745cc9b8e4a07b28efe47ab1457979fe7086f074ee6a40190d35c887735" data-owner="freestar" async="" type="text/javascript"></script><style type="text/css" data-owner="freestar">@media only screen and (max-device-width: 768px) {    [class*='orp-player-ivm-'] {        box-shadow: 0px !important;    }    .orp-player-ivm-BC {        left: 75vw !important;    }}    @media only screen and (max-device-width: 768px) {      [class*='orp-player-ivm-'] {          box-shadow: 0px !important;      }      .orp-player-ivm-BC {          left: 75vw !important;      }  }</style><script src="https://secure.quantserve.com/quant.js" data-owner="freestar" async="" type="text/javascript"></script><style id="_fs-slidewall-stylesheet"></style><script src="https://cdn.browsiprod.com/bootstrap/bootstrap.js" id="browsi-tag" data-pubkey="freestar" data-sitekey="d_mapping" type="text/javascript" async=""></script><script src="https://p.ad.gt/api/v1/p/474" async=""></script><script src="//cdn.insiad.com/ins-ag/ins-ag.min.js" async=""></script><script src="https://www.googletagmanager.com/gtag/js?id=G-FVWZ0RM4DH&amp;l=audDataLayer" async=""></script><script src="//cdn.browsiprod.com/web-vitals/web-vitals-4.2.3.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/62/11d/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/62/11d/util.js"></script></head>
+<body>
+<div class="flex support-warning bg-yellow-400 text-foreground items-center justify-center gap-1 p-2">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-triangle-alert h-6 w-6"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg>
+    <p>Your browser is not supported.  Please use a newer browser for the full MHR experience.</p>
+</div>
+<div class="flex min-h-screen w-full flex-col">
+  <div class="sticky flex flex-col w-full top-0 z-50 flex items-center justify-center bg-muted border-b">
+    <div class="p-1 w-full lg:min-h-[90px]">
+			<div class="flex items-center justify-center"><a href="https://myhockeytournaments.com/mhr2.php" title="MYHockey Tournaments" target="_blank"><img src="images/ads/mht_2025e_728x90.gif" alt="MYHockey Tournaments" height="90" width="728"></a></div>
+    </div>
+    <header class="flex w-full h-16 items-center gap-4 border-b bg-background px-4 md:px-6 2xl:px-0 2xl:pr-4">
+    <div class="px-2 flex xl:justify-end grow gap-2">
+      <button uk-toggle="target: #mhr-mobile-nav" aria-label="Show Navigation" class="p-2 border-[1px] shadow-sm rounded hover:bg-muted xl:hidden" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+      </button>
+      <a href="/">
+          <img class="h-10" src="/images/mhr.v5.logo-sm.png">
+          <span class="sr-only">MYHockey Rankings</span>
+      </a>
+    </div>
+    <div class="flex justify-end gap-2 grow max-w-4xl">
+        <nav class="hidden flex-col gap-6 text-lg font-medium xl:flex xl:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6 grow px-2 max-w-4xl">
+            <button class="uk-button uk-button-link text-muted-foreground transition-colors hover:text-foreground font-semibold" type="button" aria-haspopup="true">Rankings <uk-icon icon="chevron-down"><!----><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=""><path d="m6 9 6 6 6-6"></path></svg></uk-icon></button>
+            <div class="uk-drop uk-dropdown" uk-dropdown="">
+              <ul class="uk-dropdown-nav uk-nav">
+                <li><a href="club-rankings">Association Rankings</a></li>
+                <li class="uk-nav-divider"></li>
+                <li><a href="rankings/squirt">Squirt Rankings</a></li>
+                <li><a href="rankings/peewee">Peewee Rankings</a></li>
+                <li><a href="rankings/bantam">Bantam Rankings</a></li>
+                <li><a href="rankings/midget-minor">Midget Minor Rankings</a></li>
+                <li><a href="rankings/midget-major">Midget Major Rankings</a></li>
+                <li><a href="rankings/highschool">High School Rankings</a></li>
+                <li><a href="rankings/junior">Junior Rankings</a></li>
+                <li><a href="rankings/college">College Rankings</a></li>
+                <li><a href="rankings/girls">Girls Rankings</a></li>
+              </ul>
+            </div>
+          <a href="/history" class="text-muted-foreground transition-colors hover:text-foreground font-semibold">
+            News
+          </a>
+          <a href="/associations" class="text-muted-foreground transition-colors hover:text-foreground font-semibold">
+            Associations
+          </a>
+          <a href="/leagues" class="text-muted-foreground transition-colors hover:text-foreground font-semibold">
+            Leagues
+          </a>
+          <a href="http://myhockeytournaments.com/mhr1.php" target="_blank" class="text-muted-foreground transition-colors hover:text-foreground font-semibold">
+            Tournaments
+          </a>
+          <button class="text-muted-foreground hover:text-foreground font-semibold uk-button uk-button-link" type="button" aria-haspopup="true">Resources <uk-icon icon="chevron-down"><!----><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=""><path d="m6 9 6 6 6-6"></path></svg></uk-icon></button>
+            <div class="uk-drop uk-dropdown" uk-dropdown="">
+              <ul class="uk-dropdown-nav uk-nav">
+                    <li><a href="/rinks">Rinks</a></li>
+                    <li><a href="/game-def">Game Rules</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="/how-to">How-To/Tutorial</a></li>
+                    <li><a href="/sponsorship">Advertise</a></li>
+                    <li><a href="/contact-us">Contact Us</a></li>
+              </ul>
+            </div>
+          <a href="/member-benefits" class="text-muted-foreground transition-colors hover:text-foreground font-semibold">
+            Sign Up
+          </a>
+                    <a href="/login" class="text-muted-foreground transition-colors hover:text-foreground font-semibold">
+            Login
+          </a>
+          
+        </nav>
+        <div id="search-button"><button class="flex gap-2 rounded-xl bg-muted hover:bg-muted/60 transition-colors text-muted-foreground px-4 py-1 border-2 items-center text-sm" uk-toggle="target: #search_3qa4fdhh82s_modal"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-icon lucide-search w-4 h-4"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg> <span class="border-l-[2px] px-2 font-bold tracking-tight">Search</span></button> <div class="uk-flex-top uk-modal" uk-modal="" id="search_3qa4fdhh82s_modal"><div class="uk-modal-body uk-margin-auto-vertical uk-modal-dialog overflow-visible !mt-16" role="dialog" aria-modal="true"><button class="uk-modal-close-default uk-icon uk-close" type="button" uk-close="" aria-label="Close"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-x" viewBox="0 0 24 24"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button> <div class="uk-form-stacked" id="search_3qa4fdhh82s_form"><div class="uk-margin"><label class="uk-form-label" for="search_3qa4fdhh82s_search_field">Search</label> <div class="uk-form-controls"><input class="uk-input" name="subject" type="search" autocomplete="off" maxlength="256" autofocus="" id="search_3qa4fdhh82s_search_field"></div> <div class="relative"><!----></div></div> <div class="uk-margin flex gap-2"><div class="grow w-full"><label class="uk-form-label" for="search_3qa4fdhh82s_kind">Filter</label> <div class="uk-form-controls"><select class="uk-select" id="search_3qa4fdhh82s_kind"><option value="">ALL</option><option value="teams">Teams</option><option value="divisions">Ranking Categories/Divisions</option><option value="associations">Associations</option><option value="leagues">Leagues</option><option value="rinks">Rinks</option></select></div></div> <div class="grow w-full"><label class="uk-form-label" for="search_3qa4fdhh82s_level">Age Level</label> <div class="uk-form-controls"><select class="uk-select" id="search_3qa4fdhh82s_level"><option value="">ALL</option><!----></select></div></div></div></div></div></div></div>
+        <script>
+             MHRv5.search( document.getElementById("search-button" ) );
+        </script>
+    </div>
+    <div class="hidden sm:flex space-x-1 xl:grow">
+        <a href="http://www.twitter.com/myhockeyranking" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-foreground h-8 w-8 bg-slate-600 hover:bg-slate-500">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="h-4 w-4 bi bi-twitter-x">
+            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"></path>
+            </svg>
+            <span class="sr-only">MHR Twitter Profile</span>
+        </a>
+        <a href="http://www.facebook.com/MyHockeyRankings" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-foreground h-8 w-8 bg-blue-500 hover:bg-blue-400">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="h-4 w-4 bi bi-facebook">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"></path>
+            </svg>
+            <span class="sr-only">MHR Facebook Page</span>
+        </a>
+        <a href="https://www.instagram.com/myhockeyranking" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-foreground h-8 w-8 bg-purple-500 hover:bg-purple-400">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"></path>
+            </svg>
+            <span class="sr-only">MHR Instagram Profile</span>
+        </a>
+        <a href="https://www.youtube.com/@myhockeyrankings3331" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-foreground h-8 w-8 bg-red-500 hover:bg-red-400">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                  <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"></path>
+            </svg>
+            <span class="sr-only">MHR YouTube Channel</span>
+        </a>
+        <a href="/rss.xml" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-foreground h-8 w-8 bg-orange-500 hover:bg-orange-400">
+            <svg width="24" height="24" stroke="currentColor" stroke-width="2" class="lucide-icon lucide lucide-rss h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 11a9 9 0 0 1 9 9"></path>
+                <path d="M4 4a16 16 0 0 1 16 16"></path>
+                <circle cx="5" cy="19" r="1"></circle>
+            </svg>
+            <span class="sr-only">MHR RSS Feed</span>
+        </a>
+        <div>
+            <div role="none" aria-orientation="vertical" aria-hidden="true" class="shrink-0 bg-border h-full w-[1px]"></div>
+        </div>
+        <button type="button" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-foreground h-8 w-8 bg-secondary/60 hover:bg-secondary/50 rounded-full" aria-haspopup="true">
+            <svg width="24" height="24" stroke="currentColor" stroke-width="2" class="lucide-icon lucide lucide-user h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span class="sr-only">Your Account</span>
+        </button>
+        <div class="uk-card uk-card-body uk-card-default uk-drop p-0" uk-drop="mode: click; pos: bottom-right; animation: duration: 250;">
+              <ul class="uk-nav-primary uk-nav" uk-nav="">
+                                <li>
+                    <a href="/login">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-in w-4 h-4 inline mr-2 text-muted-foreground"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" x2="3" y1="12" y2="12"></line></svg>
+                        Log In
+                    </a>
+                </li>
+                <li>
+                    <a href="/member-benefits">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-plus w-4 h-4 inline mr-2 text-muted-foreground"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><line x1="19" x2="19" y1="8" y2="14"></line><line x1="22" x2="16" y1="11" y2="11"></line></svg>
+                        Sign Up
+                    </a>
+                </li>
+                            </ul>
+        </div>
+    </div>
+</header>
+</div>
+  <div class="md:flex min-h-screen w-full">
+      <div class="hidden border-r bg-muted/40 lg:block shrink-0 2xl:grow">
+    <div class="flex flex-col gap-2 sticky top-40 ">
+    <div class="flex h-full overflow-hidden ">
+        <div class="flex flex-col bg-slate-200 shadow-inner">
+        </div>
+        <div class="ml-auto w-56 shrink-0 px-2">
+          <div class="flex h-14 items-center border-b px-4 lg:h-[60px]">
+            <a href="/" class="flex items-center gap-2 font-semibold">
+                <span class="">2025-26 Rankings</span>
+            </a>
+          </div>
+          <div class="flex-1">
+                            <h3 class="font-semibold px-4 py-2 text-sm">Association Rankings</h3>
+
+              <ul class="text-xs mb-2">
+                  <li><a class="block px-4 py-1 rounded hover:bg-muted" href="association_rankings.php?y=2025&amp;type=youth&amp;country=US">USA Youth</a></li>
+                  <li><a class="block px-4 py-1 rounded hover:bg-muted" href="association_rankings.php?y=2025&amp;type=midget&amp;country=US">USA Midget</a></li>
+                  <li><a class="block px-4 py-1 rounded hover:bg-muted" href="association_rankings.php?y=2025&amp;type=girls&amp;country=US">USA Girls</a></li>
+              </ul>
+              <ul class="text-xs">
+                  <li><a class="block px-4 py-1 rounded hover:bg-muted" href="association_rankings.php?y=2025&amp;type=youth&amp;state=ON">Ontario Youth</a></li>
+                  <li><a class="block px-4 py-1 rounded hover:bg-muted" href="association_rankings.php?y=2025&amp;type=girls&amp;state=ON">Ontario Girls</a></li>
+              </ul>
+              <h3 class="font-semibold px-4 py-2 text-sm">Team Rankings</h3>
+              <ul class="text-xs">
+                  <li><a class="block px-4 py-1 rounded hover:bg-muted" href="rankings.php?x=0&amp;level=squirt">Squirt (10U)</a></li>
+                  <li><a class="block px-4 py-1 rounded hover:bg-muted" href="rankings.php?x=0&amp;level=peewee">Peewee (12U)</a></li>
+                  <li><a class="block px-4 py-1 rounded hover:bg-muted" href="rankings.php?x=0&amp;level=bantam">Bantam (14U)</a></li>
+                  <li><a class="block px-4 py-1 rounded hover:bg-muted" href="rankings.php?x=0&amp;level=midget_minor">Midget Minor (16U)</a></li>
+                  <li><a class="block px-4 py-1 rounded hover:bg-muted" href="rankings.php?x=0&amp;level=midget_major">Midget Major (18U)</a></li>
+                  <li><a class="block px-4 py-1 rounded hover:bg-muted" href="rankings.php?x=0&amp;level=highschool">High School</a></li>
+                  <li><a class="block px-4 py-1 rounded hover:bg-muted" href="rankings.php?x=0&amp;level=junior">Junior</a></li>
+                  <li><a class="block px-4 py-1 rounded hover:bg-muted" href="rankings.php?x=0&amp;level=college">College</a></li>
+                  <li><a class="block px-4 py-1 rounded hover:bg-muted" href="rankings.php?x=0&amp;level=girls">Girls</a></li>
+              </ul>
+              <!--
+            <ul class="uk-nav-primary" uk-nav>
+                <li>
+                    <a href="/login">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-in w-4 h-4 inline mr-2 text-muted-foreground"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" x2="3" y1="12" y2="12"/></svg>
+                        Log In
+                    </a>
+                </li>
+                <li>
+                    <a href="/member-benefits">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-plus w-4 h-4 inline mr-2 text-muted-foreground"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" x2="19" y1="8" y2="14"/><line x1="22" x2="16" y1="11" y2="11"/></svg>
+                        Sign Up
+                    </a>
+                </li>
+            </ul>
+              -->
+              <div class="my-4">
+              <!-- Tag ID: myhockeyrankings_skyscraper_left -->
+<div align="center" id="myhockeyrankings_skyscraper_left">
+  <script data-cfasync="false" type="text/javascript">
+      let adUnit = document.querySelector("#myhockeyrankings_skyscraper_left");
+      if( !window.ResizeObserver ) {
+        adUnit.setAttribute("data-freestar-ad", "__160x600");
+        freestar.config.enabled_slots.push({ placementName: "myhockeyrankings_skyscraper_left", slotId: "myhockeyrankings_skyscraper_left" });
+      }else{
+          document.addEventListener("DOMContentLoaded", () => {
+              let main = document.querySelector("main");
+              let observer = new ResizeObserver((entries) => {
+                  if( main.clientHeight > adUnit.offsetTop + 600 ) {
+                    adUnit.setAttribute("data-freestar-ad", "__160x600");
+                    freestar.config.enabled_slots.push({ placementName: "myhockeyrankings_skyscraper_left", slotId: "myhockeyrankings_skyscraper_left" });
+                    observer.disconnect();
+                  }
+              });
+              observer.observe(main);
+          });
+      }
+  </script>
+</div>
+              </div>
+                      </div>
+          <div class="mt-auto p-4">
+          </div>
+        </div>
+    </div>
+</div>
+</div>
+      <main class="z-0 grow w-full max-w-4xl relative">
+		<div class="flex flex-1 flex-col gap-4 p-4 max-w-4xl">
+    <div>
+        <div class="w-full">
+    <div class="bg-secondary flex">
+        <div class="text-xs bg-primary text-primary-foreground px-4 py-1 font-bold relative
+                    after:content-[''] after:bg-primary after:h-6 after:w-6 after:absolute after:ml-1 after:-mt-1 after:skew-x-[45deg]">Division</div>
+    </div>
+    <div class="shadow-md px-4 z-20 relative border-[1px] bg-background w-full">
+                <h1 class="text-lg lg:text-2xl tracking-tight font-bold sm:whitespace-nowrap overflow-hidden text-ellipsis w-full">2025-26 SCAHA 12U  A</h1>
+            </div>
+    <div class="bg-primary before:z-0 z-10 text-primary-foreground ml-8 px-4 py-1 text-xs relative h-6 shadow-md
+                before:content-[''] before:bg-primary before:h-6 before:w-8 before:absolute before:-mt-1 before:-ml-8 before:skew-x-[45deg]">
+        <div class="-ml-4 z-20 absolute font-bold w-full pr-4">
+            Southern California        </div>
+     </div>
+</div>
+        <div class="sm:px-8">
+            <div class="flex flex-col sm:flex-row mt-2 space-y-3 sm:space-y-0 sm:space-x-8 py-2">
+				<div>
+                   <h3 class="text-xs font-medium">League</h3>
+                                      <a class="text-sm text-muted-foreground hover:text-foreground" href="/league-info?l=122">SCAHA</a>
+                                   </div>
+            </div>
+            <div role="none" aria-hidden="true" class="shrink-0 bg-border h-[1px] w-full"></div>
+                                    <div class="flex flex-col sm:flex-row mt-2 space-y-3 sm:space-y-0 sm:space-x-8 py-2">
+                <div class="basis-5/12 grow-0">
+                   <h3 class="text-xs font-medium">Volunteer Status</h3>
+                                    <span class="text-sm">Taken</span>
+                                                    </div>
+            </div>
+            <div role="none" aria-hidden="true" class="shrink-0 bg-border h-[1px] w-full"></div>
+                                     <div class="text-right text-xs py-1">
+                <a class="hover:underline" href="/change-requests?o=d&amp;a=u&amp;n=1665">Request Change</a> |
+                <a class="hover:underline" href="/change-requests?o=d&amp;a=d&amp;n=1665">Division is Defunct</a>
+            </div>
+                    </div>
+    </div>
+    <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+    <div class="p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-1 pb-4">
+                <h3 class="tracking-tight text-xl font-bold grow">2025-26 Teams</h3>
+                    </div>
+    <div class="p-6 pt-0">
+                                <div class="uk-overflow-auto">
+                <table class="uk-table uk-table-small uk-table-divider rating-math text-center text-xs min-w-[500px]">
+                    <tbody><tr>
+                        <th>Team Name</th>
+                        <th>Division(s)</th>
+                        <th class="whitespace-nowrap">W-L-T</th>
+                        <th>Rating</th>
+                    </tr>
+                                      <tr>
+                       <td>
+                           <a class="hover:underline" href="/team-info?t=30304&amp;y=2025">California Bears 12U A</a>
+                       </td>
+                       <td>
+                                                        <ul>
+                                                                <li>
+                                    <a class="hover:underline" href="/division-info?y=2025&amp;d=1665">SCAHA 12U  A</a>
+                                </li>
+                                                            </ul>
+                                                   </td>
+                       <td class="whitespace-nowrap">13-3-2</td>
+                       <td>84.75</td>
+                   </tr>
+                                      <tr>
+                       <td>
+                           <a class="hover:underline" href="/team-info?t=19162&amp;y=2025">Anaheim Jr Ducks (#1) 12U A</a>
+                       </td>
+                       <td>
+                                                        <ul>
+                                                                <li>
+                                    <a class="hover:underline" href="/division-info?y=2025&amp;d=1665">SCAHA 12U  A</a>
+                                </li>
+                                                            </ul>
+                                                   </td>
+                       <td class="whitespace-nowrap">11-0-1</td>
+                       <td>84.16</td>
+                   </tr>
+                                      <tr>
+                       <td>
+                           <a class="hover:underline" href="/team-info?t=2930&amp;y=2025">Orange County HC 12U A</a>
+                       </td>
+                       <td>
+                                                        <ul>
+                                                                <li>
+                                    <a class="hover:underline" href="/division-info?y=2025&amp;d=1665">SCAHA 12U  A</a>
+                                </li>
+                                                            </ul>
+                                                   </td>
+                       <td class="whitespace-nowrap">7-1-3</td>
+                       <td>83.88</td>
+                   </tr>
+                                      <tr>
+                       <td>
+                           <a class="hover:underline" href="/team-info?t=21499&amp;y=2025">LA Jr Kings 12U A</a>
+                       </td>
+                       <td>
+                                                        <ul>
+                                                                <li>
+                                    <a class="hover:underline" href="/division-info?y=2025&amp;d=1665">SCAHA 12U  A</a>
+                                </li>
+                                                            </ul>
+                                                   </td>
+                       <td class="whitespace-nowrap">8-2-0</td>
+                       <td>82.35</td>
+                   </tr>
+                                      <tr>
+                       <td>
+                           <a class="hover:underline" href="/team-info?t=19176&amp;y=2025">Aliso Viejo Avalanche 12U A</a>
+                       </td>
+                       <td>
+                                                        <ul>
+                                                                <li>
+                                    <a class="hover:underline" href="/division-info?y=2025&amp;d=1665">SCAHA 12U  A</a>
+                                </li>
+                                                            </ul>
+                                                   </td>
+                       <td class="whitespace-nowrap">7-3-0</td>
+                       <td>82.30</td>
+                   </tr>
+                                      <tr>
+                       <td>
+                           <a class="hover:underline" href="/team-info?t=5000&amp;y=2025">California Heat 12U A</a>
+                       </td>
+                       <td>
+                                                        <ul>
+                                                                <li>
+                                    <a class="hover:underline" href="/division-info?y=2025&amp;d=1665">SCAHA 12U  A</a>
+                                </li>
+                                                            </ul>
+                                                   </td>
+                       <td class="whitespace-nowrap">9-2-0</td>
+                       <td>82.02</td>
+                   </tr>
+                                      <tr>
+                       <td>
+                           <a class="hover:underline" href="/team-info?t=19167&amp;y=2025">California Wave 12U A</a>
+                       </td>
+                       <td>
+                                                        <ul>
+                                                                <li>
+                                    <a class="hover:underline" href="/division-info?y=2025&amp;d=1665">SCAHA 12U  A</a>
+                                </li>
+                                                            </ul>
+                                                   </td>
+                       <td class="whitespace-nowrap">5-6-0</td>
+                       <td>81.85</td>
+                   </tr>
+                                      <tr>
+                       <td>
+                           <a class="hover:underline" href="/team-info?t=19165&amp;y=2025">Lakewood Ice Dogs 12U A</a>
+                       </td>
+                       <td>
+                                                        <ul>
+                                                                <li>
+                                    <a class="hover:underline" href="/division-info?y=2025&amp;d=1665">SCAHA 12U  A</a>
+                                </li>
+                                                            </ul>
+                                                   </td>
+                       <td class="whitespace-nowrap">6-4-0</td>
+                       <td>81.64</td>
+                   </tr>
+                                      <tr>
+                       <td>
+                           <a class="hover:underline" href="/team-info?t=2376&amp;y=2025">Santa Clarita Flyers 12U A</a>
+                       </td>
+                       <td>
+                                                        <ul>
+                                                                <li>
+                                    <a class="hover:underline" href="/division-info?y=2025&amp;d=1665">SCAHA 12U  A</a>
+                                </li>
+                                                            </ul>
+                                                   </td>
+                       <td class="whitespace-nowrap">7-5-2</td>
+                       <td>80.85</td>
+                   </tr>
+                                      <tr>
+                       <td>
+                           <a class="hover:underline" href="/team-info?t=21092&amp;y=2025">Ventura Mariners 12U A</a>
+                       </td>
+                       <td>
+                                                        <ul>
+                                                                <li>
+                                    <a class="hover:underline" href="/division-info?y=2025&amp;d=1665">SCAHA 12U  A</a>
+                                </li>
+                                                            </ul>
+                                                   </td>
+                       <td class="whitespace-nowrap">3-9-1</td>
+                       <td>80.09</td>
+                   </tr>
+                                      <tr>
+                       <td>
+                           <a class="hover:underline" href="/team-info?t=3004&amp;y=2025">San Diego Jr Gulls 12U A</a>
+                       </td>
+                       <td>
+                                                        <ul>
+                                                                <li>
+                                    <a class="hover:underline" href="/division-info?y=2025&amp;d=1665">SCAHA 12U  A</a>
+                                </li>
+                                                            </ul>
+                                                   </td>
+                       <td class="whitespace-nowrap">4-9-0</td>
+                       <td>78.47</td>
+                   </tr>
+                                      <tr>
+                       <td>
+                           <a class="hover:underline" href="/team-info?t=32470&amp;y=2025">California Jr Reign 12U A</a>
+                       </td>
+                       <td>
+                                                        <ul>
+                                                                <li>
+                                    <a class="hover:underline" href="/division-info?y=2025&amp;d=1665">SCAHA 12U  A</a>
+                                </li>
+                                                            </ul>
+                                                   </td>
+                       <td class="whitespace-nowrap">5-4-1</td>
+                       <td>78.00</td>
+                   </tr>
+                                      <tr>
+                       <td>
+                           <a class="hover:underline" href="/team-info?t=10998&amp;y=2025">California Goldrush 12U A</a>
+                       </td>
+                       <td>
+                                                        <ul>
+                                                                <li>
+                                    <a class="hover:underline" href="/division-info?y=2025&amp;d=1665">SCAHA 12U  A</a>
+                                </li>
+                                                            </ul>
+                                                   </td>
+                       <td class="whitespace-nowrap">2-8-0</td>
+                       <td>76.75</td>
+                   </tr>
+                                      <tr>
+                       <td>
+                           <a class="hover:underline" href="/team-info?t=12773&amp;y=2025">Bay Harbor Red Wings 12U A</a>
+                       </td>
+                       <td>
+                                                        <ul>
+                                                                <li>
+                                    <a class="hover:underline" href="/division-info?y=2025&amp;d=1665">SCAHA 12U  A</a>
+                                </li>
+                                                            </ul>
+                                                   </td>
+                       <td class="whitespace-nowrap">2-9-0</td>
+                       <td>76.74</td>
+                   </tr>
+                                      <tr>
+                       <td>
+                           <a class="hover:underline" href="/team-info?t=30305&amp;y=2025">Coachella Valley Jr Firebirds 12U A</a>
+                       </td>
+                       <td>
+                                                        <ul>
+                                                                <li>
+                                    <a class="hover:underline" href="/division-info?y=2025&amp;d=1665">SCAHA 12U  A</a>
+                                </li>
+                                                            </ul>
+                                                   </td>
+                       <td class="whitespace-nowrap">1-6-2</td>
+                       <td>76.60</td>
+                   </tr>
+                                      <tr>
+                       <td>
+                           <a class="hover:underline" href="/team-info?t=19174&amp;y=2025">Ontario Empire 12U A</a>
+                       </td>
+                       <td>
+                                                        <ul>
+                                                                <li>
+                                    <a class="hover:underline" href="/division-info?y=2025&amp;d=1665">SCAHA 12U  A</a>
+                                </li>
+                                                            </ul>
+                                                   </td>
+                       <td class="whitespace-nowrap">1-6-2</td>
+                       <td>76.20</td>
+                   </tr>
+                                      <tr>
+                       <td>
+                           <a class="hover:underline" href="/team-info?t=19164&amp;y=2025">Santa Barbara Ice Hawks 12U A</a>
+                       </td>
+                       <td>
+                                                        <ul>
+                                                                <li>
+                                    <a class="hover:underline" href="/division-info?y=2025&amp;d=1665">SCAHA 12U  A</a>
+                                </li>
+                                                            </ul>
+                                                   </td>
+                       <td class="whitespace-nowrap">1-9-0</td>
+                       <td>75.64</td>
+                   </tr>
+                                      <tr>
+                       <td>
+                           <a class="hover:underline" href="/team-info?t=19163&amp;y=2025">Carlsbad Mavericks 12U A</a>
+                       </td>
+                       <td>
+                                                        <ul>
+                                                                <li>
+                                    <a class="hover:underline" href="/division-info?y=2025&amp;d=1665">SCAHA 12U  A</a>
+                                </li>
+                                                            </ul>
+                                                   </td>
+                       <td class="whitespace-nowrap">0-10-0</td>
+                       <td>73.29</td>
+                   </tr>
+                                   </tbody></table>
+            </div>
+                        </div>
+</div>
+        <div>
+        <a href="/team-requests/add?div=1665" class="uk-button uk-button-default text-foreground">Request to Add Missing Team</a>
+    </div>
+    </div>
+      </main>
+              <div class="hidden 2xl:block py-2 space-y-2 grow">
+    <div class="max-w-sm mr-auto space-y-2">
+                        <div class="space-y-2">
+<div class="hidden" data-mhr-recommendation="1">
+    <a href="/news?b=4334">
+        <div class="rounded-lg border bg-card text-card-foreground shadow-sm h-full w-full">
+            <div class="flex flex-col space-y-1.5 p-0 pt-0 md:p-0">
+            <div style="position: relative; width: 100%; padding-bottom: 56.25%;">
+            <div class="bg-muted overflow-hidden" style="position: absolute; inset: 0px;">
+                                <div data-lazy-img-src="https://ranktech-cdn.s3.us-east-2.amazonaws.com/myhockey_prod/news/ni20251027111725.png" class="rounded object-cover w-full h-full"></div>
+                            </div>
+            </div>
+            <!--<Aspect-ratio>-->
+            <h3 class="font-semibold tracking-tight text-xl px-4">MYHockey Moments: Parents, These Three Words Can Make a Lifetime Impression</h3>
+            <!--<Card-title>-->
+            <div class="text-sm text-muted-foreground !mt-2 px-4 pb-4 space-y-1"><span class=" font-bold">MYHockey Moments</span> |<time datetime="2025-10-27 11:16:13" class="text-muted-foreground">
+                                                1d
+                            </time>
+            </div>
+            </div>
+        </div>
+    </a>
+</div>
+<div class="hidden" data-mhr-recommendation="2">
+    <a href="/news?b=4333">
+        <div class="rounded-lg border bg-card text-card-foreground shadow-sm h-full w-full">
+            <div class="flex flex-col space-y-1.5 p-0 pt-0 md:p-0">
+            <div style="position: relative; width: 100%; padding-bottom: 56.25%;">
+            <div class="bg-muted overflow-hidden" style="position: absolute; inset: 0px;">
+                                <div data-lazy-img-src="https://ranktech-cdn.s3.us-east-2.amazonaws.com/myhockey_prod/news/ni20251026172653.png" class="rounded object-cover w-full h-full"></div>
+                            </div>
+            </div>
+            <!--<Aspect-ratio>-->
+            <h3 class="font-semibold tracking-tight text-xl px-4">It's Peak Performer Time!</h3>
+            <!--<Card-title>-->
+            <div class="text-sm text-muted-foreground !mt-2 px-4 pb-4 space-y-1"><span class=" font-bold">MHR Peak Performers</span> |<time datetime="2025-10-26 17:24:20" class="text-muted-foreground">
+                                                1d
+                            </time>
+            </div>
+            </div>
+        </div>
+    </a>
+</div>
+</div>
+<script>
+(function () {
+    var d = document;
+    var newsImages = d.querySelectorAll("[data-lazy-img-src]");
+    var imageLoader = function () {
+        var newsImages0 = [];
+        for( var i = 0; i < newsImages.length; i++ ) {
+            (function(newsImage){
+                var newsRect = newsImage.getBoundingClientRect();
+                if( newsRect.top < window.innerHeight && newsRect.bottom > 0 ) {
+                   var src = newsImage.dataset.lazyImgSrc;
+                   var title = newsImage.title;
+                   var img = new Image();
+                   img.alt = title;
+                   img.onload = function () {
+                       img.className = newsImage.className;
+                       newsImage.parentNode.replaceChild( img, newsImage );
+                   };
+                  img.src = src;
+                }else{
+                    newsImages0.push(newsImages[i]);
+                }
+            })(newsImages[i]);
+        }
+        newsImages = newsImages0;
+    }
+    imageLoader();
+    window.addEventListener("scroll", imageLoader);
+})();
+</script>
+      
+              </div>
+    <div class="max-w-sm mr-auto space-y-2 sticky top-44 space-y-2 flex flex-col items-center gap-2">
+            <div class="bg-muted p-1">
+                <a id="mhr-rcol-ad-1" href="https://myhockeytournaments.com/mhr3.php" target="_blank"><img src="images/ads/mht_2025e_300x120.gif" alt="MYHockey Tournaments"></a>
+<script>
+(function () {
+    var impressionSent = false;
+    var el = document.getElementById("mhr-rcol-ad-1");
+    if( !el ) return;
+
+    function checkImpresion() {
+        var visible = false;
+        var rect = el.getBoundingClientRect();
+        if( rect.top < window.innerHeight && rect.bottom > 0 ) {
+            visible = true;
+        }
+        if( visible && !impressionSent ) {
+            impressionSent = true;
+            gtag("event", "view_promotion", {
+                items: [{
+                    promotion_name: "MYHockey Tournaments mhr_gold",
+                    affiliation: "MYHockey Tournaments",
+                    creative_slot: "mhr_gold",
+                    creative_name: "MHR Gold (right_column)",
+                    item_variant: "mhr_gold (right_column) 320x120"                }]
+            });
+            document.removeEventListener("scroll", checkImpresion, true);
+            window.removeEventListener("resize", checkImpresion);
+        } 
+    }
+    checkImpresion();
+    document.addEventListener("scroll", checkImpresion, true);
+    window.addEventListener("resize", checkImpresion);
+})();
+</script>
+
+            </div>
+                        <div class="p-1 max-w-[336px] w-full">
+                <!-- Tag ID: myhockeyrankings_medrec_right -->
+<div align="center" data-freestar-ad="__300x250" id="myhockeyrankings_medrec_right" name="myhockeyrankings_medrec_right" data-google-query-id="CPrTmKTex5ADFfenjggdnIAKaw">
+  
+<div id="google_ads_iframe_/15184186,22547975707/myhockeyrankings_medrec_right_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/15184186,22547975707/myhockeyrankings_medrec_right_0" name="google_ads_iframe_/15184186,22547975707/myhockeyrankings_medrec_right_0" title="3rd party ad content" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" aria-label="Advertisement" tabindex="0" allow="private-state-token-redemption;attribution-reporting" data-load-complete="true" data-google-container-id="2" style="border: 0px; vertical-align: bottom;"></iframe></div></div>
+            </div>
+            <div class="p-1 max-w-[336px] w-full">
+                <!-- Tag ID: myhockeyrankings_medrec_right_2 -->
+<div align="center" data-freestar-ad="__300x250" id="myhockeyrankings_medrec_right_2" name="myhockeyrankings_medrec_right_2" data-google-query-id="CLnloqTex5ADFce0jggd22QUnQ">
+  
+<div id="google_ads_iframe_/15184186,22547975707/myhockeyrankings_medrec_right_2_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/15184186,22547975707/myhockeyrankings_medrec_right_2_0" name="google_ads_iframe_/15184186,22547975707/myhockeyrankings_medrec_right_2_0" title="3rd party ad content" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" aria-label="Advertisement" tabindex="0" allow="private-state-token-redemption;attribution-reporting" data-load-complete="true" data-google-container-id="3" style="border: 0px; vertical-align: bottom;"></iframe></div></div>
+            </div>
+                 </div>
+  </div>
+  </div>
+  <footer class="border-t-[3rem] border-primary">
+    <div class="bg-secondary text-secondary-foreground flex p-8 gap-8 border-t-4">
+      <div class="flex flex-col lg:flex-row gap-16 max-w-6xl m-auto grow">
+          <div class="grow">
+            <a href="/" class="flex items-center gap-2 text-lg font-semibold md:text-base">
+                <img class="m-auto h-32" src="/images/mhr.v5.logo-full-bg.png">
+                <span class="sr-only">MYHockey Rankings</span>
+            </a>
+          </div>
+          <div class="flex flex-col md:flex-row gap-10 md:gap-16 grow">
+              <div class="flex gap-4 sm:gap-16 grow">
+                  <div class="flex flex-col gap-2 grow">
+                      <h3 class="font-semibold">Learn More</h3>
+                      <nav class="flex flex-col text-sm">
+                          <a class="hover:underline" href="/about">About</a>
+                          <a class="hover:underline" href="/faq">FAQ</a>
+                          <a class="hover:underline" href="/how-to">How-To/Tutorial</a>
+                          <a class="hover:underline" href="/game-def">Game Rules</a>
+                          <a class="hover:underline" href="/contact-us">Contact Us</a>
+                          <a class="hover:underline" href="/sponsorship">Advertise</a>
+                      </nav>
+                  </div>
+                  <div>
+                      <hr class="uk-divider-vertical h-full">
+                  </div>
+                  <div class="flex flex-col gap-2 grow">
+                      <h3 class="font-semibold">Discover</h3>
+                      <nav class="flex flex-col text-sm">
+                          <a class="hover:underline" href="http://myhockeytournaments.com/mhr1.php" target="_blank">Tournaments</a>
+                          <a class="hover:underline" href="/volunteer-hof">Volunteer Hall of Fame</a>
+                          <a class="hover:underline" href="/forums">Hockey Talk</a>
+                      </nav>
+                  </div>
+              </div>
+              <div class="hidden md:block">
+                  <hr class="uk-divider-vertical h-full">
+              </div>
+              <div class="flex flex-col gap-2 grow">
+                  <div class="max-w-sm m-auto w-full flex flex-col gap-2">
+                        <h3 class="font-semibold text-center">Follow Us</h3>
+                        <div class="flex align-center justify-center gap-2">
+                            <a href="http://www.twitter.com/myhockeyranking" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input hover:bg-accent hover:text-accent-foreground h-8 w-8 bg-transparent rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="h-4 w-4 bi bi-twitter-x">
+                                    <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"></path>
+                                </svg>
+                                <span class="sr-only">MHR Twitter Profile</span>
+                            </a>
+                            <a href="http://www.facebook.com/MyHockeyRankings" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input hover:bg-accent hover:text-accent-foreground h-8 w-8 bg-transparent rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="h-4 w-4 bi bi-facebook">
+                                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"></path>
+                                </svg>
+                                <span class="sr-only">MHR Facebook Page</span>
+                            </a>
+                            <a href="https://www.instagram.com/myhockeyranking" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input hover:bg-accent hover:text-accent-foreground h-8 w-8 bg-transparent rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"></path>
+                            </svg>
+                                <span class="sr-only">MHR Instagram Profile</span>
+                            </a>
+                            <a href="https://www.youtube.com/@myhockeyrankings3331" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input hover:bg-accent hover:text-accent-foreground h-8 w-8 bg-transparent rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                                      <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"></path>
+                                </svg>
+                                <span class="sr-only">MHR YouTube Channel</span>
+                            </a>
+                            <a href="/rss.xml" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input hover:bg-accent hover:text-accent-foreground h-8 w-8 bg-transparent rounded-full">
+                                <svg width="24" height="24" stroke="currentColor" stroke-width="2" class="lucide-icon lucide lucide-rss h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 11a9 9 0 0 1 9 9"></path>
+                                    <path d="M4 4a16 16 0 0 1 16 16"></path>
+                                    <circle cx="5" cy="19" r="1"></circle>
+                                </svg>
+                                <span class="sr-only">MHR RSS Feed</span>
+                            </a>
+                        </div>
+                       <a class="uk-button uk-button-primary rounded-full w-full font-semibold border-[1px] border-border mt-2" href="/member-benefits">Sign Up!</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="bg-tertiary text-tertiary-foreground flex px-8 py-4">
+       <div class="grow">
+           <small class="text-xs">
+               © 2025 MYHockey Rankings, LLC. All Rights Reserved.
+                          </small>
+       </div>
+       <div class="flex text-xs gap-2 text-right">
+          <a class="hover:underline" href="/privacy.php">Privacy Policy</a>
+          <a class="hover:underline" href="/terms.php">Terms of Use</a>
+       </div>
+    </div>
+</footer>
+</div><iframe name="__tcfapiLocator" style="display: none;"></iframe>
+<div id="mhr-mobile-nav" uk-offcanvas="overlay: true;" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar p-4" role="dialog" aria-modal="true">
+          <button class="uk-offcanvas-close uk-icon uk-close" type="button" uk-close="" aria-label="Close"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-x" viewBox="0 0 24 24"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
+          <div class="flex flex-col gap-2">
+              <a href="/">
+                  <img class="h-10" src="/images/mhr.v5.logo-sm.png">
+                  <span class="sr-only">MYHockey Rankings</span>
+              </a>
+              <ul class="uk-nav-primary uk-nav" uk-nav="">
+                <li class="uk-parent">
+                  <a href="#rankings" id="uk-nav-1" role="button" aria-controls="uk-nav-2" aria-expanded="false" aria-disabled="false">Rankings <span uk-nav-parent-icon="" class="uk-icon uk-nav-parent-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></span></a>
+                  <ul class="uk-nav-sub" hidden="" id="uk-nav-2" role="region" aria-labelledby="uk-nav-1">
+                    <li role="presentation"><a href="club-rankings">Association Rankings</a></li>
+                    <li class="uk-nav-divider" role="presentation"></li>
+                    <li role="presentation"><a href="rankings/squirt">Squirt Rankings</a></li>
+                    <li role="presentation"><a href="rankings/peewee">Peewee Rankings</a></li>
+                    <li role="presentation"><a href="rankings/bantam">Bantam Rankings</a></li>
+                    <li role="presentation"><a href="rankings/midget-minor">Midget Minor Rankings</a></li>
+                    <li role="presentation"><a href="rankings/midget-major">Midget Major Rankings</a></li>
+                    <li role="presentation"><a href="rankings/highschool">High School Rankings</a></li>
+                    <li role="presentation"><a href="rankings/junior">Junior Rankings</a></li>
+                    <li role="presentation"><a href="rankings/college">College Rankings</a></li>
+                    <li role="presentation"><a href="rankings/girls">Girls Rankings</a></li>
+                  </ul>
+                </li>
+                <li><a href="/history">News</a></li>
+                <li><a href="/associations">Associations</a></li>
+                <li><a href="/leagues">Leagues</a></li>
+                <li><a href="http://myhockeytournaments.com/mhr1.php" target="_blank">Tournaments</a></li>
+                <li class="uk-parent">
+                  <a href="#rankings" id="uk-nav-3" role="button" aria-controls="uk-nav-4" aria-expanded="false" aria-disabled="false">Resources <span uk-nav-parent-icon="" class="uk-icon uk-nav-parent-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></span></a>
+                  <ul class="uk-nav-sub" hidden="" id="uk-nav-4" role="region" aria-labelledby="uk-nav-3">
+                    <li role="presentation"><a href="/rinks">Rinks</a></li>
+                    <li role="presentation"><a href="/game-def">Game Rules</a></li>
+                    <li role="presentation"><a href="/faq">FAQ</a></li>
+                    <li role="presentation"><a href="/how-to">How-To/Tutorial</a></li>
+                    <li role="presentation"><a href="/sponsorship">Advertise</a></li>
+                    <li role="presentation"><a href="/contact-us">Contact Us</a></li>
+                  </ul>
+                </li>
+            </ul>
+                       <ul class="uk-nav-primary mt-0 uk-nav" uk-nav="">
+                <li><a href="/member-benefits">Sign Up</a></li>
+                                <li><a href="/login">Login</a></li>
+                            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Freestar -->
+
+<!-- Tag ID: myhockeyrankings_1x1 -->
+<div align="center" id="myhockeyrankings_1x1" name="myhockeyrankings_1x1" data-google-query-id="COv-uKPex5ADFdGfjggdLmA0ow">
+  <script data-cfasync="false" type="text/javascript">
+    freestar.config.enabled_slots.push({ placementName: "myhockeyrankings_1x1", slotId: "myhockeyrankings_1x1" });
+  </script>
+</div>
+<!-- [END] Freestsr -->
+<!-- Recommendations -->
+<script data-cfasync="false" type="text/javascript">
+document.addEventListener("DOMContentLoaded", () => {
+    let main = document.querySelector("main");
+    let recommendations = document.querySelectorAll("[data-mhr-recommendation]");
+    let showAds = true;
+    let adPlaced = false;
+    if( recommendations.length > 0 && window.ResizeObserver ){
+        let observer = new ResizeObserver((entries) => {
+            let h = main.clientHeight;
+            let baseHeight = 350;
+            for( const [i,r] of recommendations.entries() ) {
+                if( i === 1 && showAds && !adPlaced && h > 700 + 280 ) {
+                    let ad = document.createElement("div");
+                    ad.id = "myhockeyrankings_medrec_3";
+                    ad.setAttribute("data-freestar-ad", "__300x250");
+                    ad.setAttribute("align", "center");
+                    freestar.config.enabled_slots.push({ placementName: "myhockeyrankings_medrec_3", slotId: "myhockeyrankings_medrec_3" });
+                    r.parentNode.insertBefore( ad, r );
+                    h = h - 280;
+                    adPlaced = true; 
+                }
+                if( h > 700 + baseHeight ) {
+                    r.classList.remove("hidden");
+                    h = h - r.clientHeight;
+                }else break;
+            }
+            window.dispatchEvent(new CustomEvent('scroll'));
+        });
+        observer.observe(main);
+    }
+});
+</script>
+
+
+<iframe marginwidth="0" marginheight="0" scrolling="no" frameborder="0" id="1e98ca0d26fabf" width="0" height="0" src="about:blank" name="__pb_locator__" style="display: none; height: 0px; width: 0px; border: 0px;"></iframe><script src="https://metrics.rapidedge.io/gamera.js?ltv=1&amp;audience=1&amp;tpcs=1&amp;partner=freestar" type="text/javascript" async="" id="__gamera__"></script><div><div id="primisPlayerContainerDiv" class="primisslate"><iframe marginwidth="0" marginheight="0" frameborder="0" scrolling="no" title="Primis Frame" id="google_ads_iframe_dummy_sekindoParent496" style="width: 1px; height: 1px; position: absolute;"></iframe><div id="primis_container_div_690127fb77761" style="position: relative;"><div id="primis_playerSekindoSPlayer690127fb7775c" style="overflow: hidden; position: fixed; height: 168.75px; box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 6px 3px; border-radius: 8px; z-index: 1021; right: -400px; bottom: 0px; width: 300px;"><div id="Player-Div-SekindoSPlayer690127fb7775c" style="width: max-content; height: max-content; top: auto; left: auto; position: static; transform: none;"><div id="Video-Div-SekindoSPlayer690127fb7775c" style="position: relative;"><div id="Video-iFrame-SekindoSPlayer690127fb7775c" style="overflow: hidden; position: relative; width: 300px; height: 168.75px;"><div id="videoContainerDiv" style="width: 100%; height: 100%; background: black; position: relative; z-index: 1;"><div style="width: 100%; height: 100%;"><video playsinline="" crossorigin="anonymous" style="width: 100%; height: 100%;"></video></div></div><div id="adContainerDiv" style="width: auto; height: auto; position: absolute; margin: auto; display: block; z-index: 2; top: 0px; left: 0px; cursor: pointer; background: black;"><div id="adVpaid" style="width: 100%; height: 100%; position: absolute; margin: auto; display: block; top: 0px; left: 0px; cursor: pointer; background: black;"></div><div id="adIma" style="width: 100%; height: 100%; position: absolute; margin: auto; display: block; top: 0px; left: 0px; cursor: pointer; background: black;"><div id="imaSlotContainer" style="width: 300px; height: 169px; margin-left: auto; margin-right: auto; z-index: -3; position: absolute; transform: translate(-3000px); overflow: hidden; background: black;"><div style="position: absolute;"><div style="display: none;"><video title="Advertisement" webkit-playsinline="true" playsinline="true" style="background-color: rgb(0, 0, 0); height: 100%; width: 100%; position: absolute; left: 0px; top: 0px;"></video><div style="position: absolute; width: 100%; height: 100%; left: 0px; top: 0px;"></div></div><div style="display: none;"><video title="Advertisement" webkit-playsinline="true" playsinline="true" style="background-color: rgb(0, 0, 0); height: 100%; width: 100%; position: absolute; left: 0px; top: 0px;"></video><div style="position: absolute; width: 100%; height: 100%; left: 0px; top: 0px;"></div></div><iframe src="https://imasdk.googleapis.com/js/core/bridge3.728.0_en.html#deid=%22%22&amp;eventfe_experiment_ids=%5B%5D&amp;fid=%22goog_67877015%22&amp;genotype_experiment_data=%7B%22experimentStateProto%22%3A%22%5B%5B%5B45713128%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B803064088%2Cnull%2Cnull%2C%5B1%5D%5D%2C%5B45681221%2Cnull%2Cnull%2C%5B1%5D%5D%2C%5Bnull%2C749060184%2Cnull%2C%5Bnull%2C100%5D%5D%2C%5B45722344%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45706017%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45668885%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45685340%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45734716%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45663239%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45715032%2Cnull%2Cnull%2C%5B1%5D%5D%2C%5B45661356%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45676441%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45675307%2Cnull%2Cnull%2C%5B1%5D%5D%2C%5B45675308%2Cnull%2Cnull%2C%5B1%5D%5D%2C%5Bnull%2C45645574%2Cnull%2C%5B%5D%5D%2C%5B45688859%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45656766%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45710689%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45710688%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45685601%2Cnull%2Cnull%2C%5B%5D%5D%2C%5Bnull%2C45685602%2Cnull%2C%5Bnull%2C500%5D%5D%2C%5B775241416%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B781107959%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B781107958%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B792614055%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B781107957%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45658982%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45725657%2Cnull%2Cnull%2C%5B%5D%5D%5D%2C%5B%5B16%2C%5B%5B1%2C%5B%5B31089630%5D%2C%5B31089631%2C%5B%5B45668885%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%5D%2C%5B1000%2C%5B%5B95332046%5D%5D%5D%2C%5Bnull%2C%5B%5B95332047%5D%5D%5D%2C%5B10%2C%5B%5B95333808%5D%2C%5B95333809%2C%5B%5B635466687%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%5D%2C%5B10%2C%5B%5B95338769%2C%5B%5Bnull%2C45645574%2Cnull%2C%5Bnull%2C1%5D%5D%5D%5D%2C%5B95338770%2C%5B%5Bnull%2C45645574%2Cnull%2C%5Bnull%2C2%5D%5D%5D%5D%5D%5D%2C%5B10%2C%5B%5B95345206%5D%2C%5B95345207%2C%5B%5B45661356%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%5D%2C%5Bnull%2C%5B%5B95351425%5D%2C%5B95351426%2C%5B%5B45676441%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%5D%2C%5B10%2C%5B%5B95356068%5D%2C%5B95356069%2C%5B%5B45685601%2Cnull%2Cnull%2C%5B%5D%5D%2C%5Bnull%2C45685602%2Cnull%2C%5B%5D%5D%5D%5D%2C%5B95356070%2C%5B%5B45685601%2Cnull%2Cnull%2C%5B1%5D%5D%2C%5Bnull%2C45685602%2Cnull%2C%5B%5D%5D%5D%5D%2C%5B95356071%2C%5B%5B45685601%2Cnull%2Cnull%2C%5B1%5D%5D%2C%5Bnull%2C45685602%2Cnull%2C%5Bnull%2C100%5D%5D%5D%5D%5D%5D%2C%5B100%2C%5B%5B95365753%2C%5B%5B45710689%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%2C%5B95365754%2C%5B%5B45710688%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%5D%2C%5B10%2C%5B%5B95372277%5D%2C%5B95372278%2C%5B%5Bnull%2C745150931%2Cnull%2C%5Bnull%2C1%5D%5D%5D%5D%5D%5D%2C%5B1%2C%5B%5B95373378%2C%5B%5B792614055%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%2C%5B95373379%2C%5B%5B781107959%2Cnull%2Cnull%2C%5B1%5D%5D%2C%5B792614055%2Cnull%2Cnull%2C%5B1%5D%5D%2C%5B781107957%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%5D%2C%5B10%2C%5B%5B95375243%5D%2C%5B95375244%5D%5D%5D%2C%5B50%2C%5B%5B95375505%5D%2C%5B95375506%2C%5B%5Bnull%2C749060184%2Cnull%2C%5B%5D%5D%5D%5D%5D%5D%2C%5B100%2C%5B%5B95375625%5D%2C%5B95375626%2C%5B%5B45706017%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%5D%2C%5Bnull%2C%5B%5B95375930%5D%2C%5B95375931%2C%5B%5B45734716%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%5D%5D%5D%5D%2Cnull%2Cnull%2C%5Bnull%2C1000%2C1%2C1000%5D%5D%22%7D&amp;imalib_experiments=%5B95342168%2C95322027%2C95331589%2C95332046%5D&amp;is_eap_loader=false&amp;managed_js_experiment_id=0&amp;pvsid=4114453453640529&amp;top_accessible_page_url=%22https%3A%2F%2Fmyhockeyrankings.com%2Fdivision-info%3Fd%3D1665%26y%3D2025%22" allowfullscreen="" allow="autoplay;attribution-reporting" id="goog_67877015" title="Advertisement" style="border: 0px; opacity: 0; margin: 0px; padding: 0px; position: relative; color-scheme: light;"></iframe><iframe title="Advertisement" style="visibility: hidden; width: 0px; height: 0px; position: absolute; left: 0px; top: 0px;"></iframe></div><video width="0" height="0" id="adVideoElement" playsinline="" autoplay="" style="top: 0px; z-index: -1; position: absolute; left: 0px; background-color: black;"></video></div></div><div id="adDisplayBanner" style="width: 100%; height: 100%; position: absolute; margin: auto; display: block; top: 0px; left: 0px; cursor: pointer; background: black;"><div id="displayBannerSlotContainer" style="width: 100%; height: 100%; margin-left: auto; margin-right: auto; z-index: 0; position: absolute; overflow: hidden;"></div></div></div><div id="layoutContainerDiv" style="width: 100%; height: 100%; position: absolute; display: inline-block; z-index: 3; top: 0px; left: 0px; pointer-events: none;"><div id="layoutDesign" style="opacity: 1; overflow: hidden; position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; z-index: 111; pointer-events: none;"><div id="adCover" style="position: absolute; top: 0px; left: 0px; z-index: 100; width: 100%; height: 100%; display: none; visibility: hidden; user-select: none; -webkit-tap-highlight-color: transparent; pointer-events: auto;"></div><div id="transparentCover" style="cursor: pointer; width: 100%; height: 100%; visibility: visible; user-select: none; -webkit-tap-highlight-color: transparent; pointer-events: auto;"><div id="transparentInner" style="visibility: inherit; width: 100%; height: 100%; background: linear-gradient(black, transparent, transparent, black); opacity: 0; user-select: none; -webkit-tap-highlight-color: transparent; pointer-events: auto;"></div></div><div id="bottomElements" style="width: 100%; bottom: 0px; left: 0px; position: absolute; opacity: 1; visibility: visible; user-select: none; -webkit-tap-highlight-color: transparent; pointer-events: auto;"><div id="soundControl" style="bottom: 11px; left: 37px; position: absolute; cursor: pointer; user-select: none; -webkit-tap-highlight-color: transparent; pointer-events: auto;"><div id="soundOnBtn" style="width: 20px; height: 20px; bottom: 0px; position: absolute; display: none; cursor: pointer; justify-content: center; user-select: none; -webkit-tap-highlight-color: transparent; pointer-events: auto;"><div id="soundOnBtnIco" style="width: 60%; cursor: pointer; filter: drop-shadow(rgba(0, 0, 0, 0.6) 0px 0px 2px); user-select: none; -webkit-tap-highlight-color: transparent; pointer-events: auto;"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="width:100%; height:100%; cursor:pointer;" enable-background="new 0 0 480 480" viewBox="0 0 480 480"><path fill="#fff" d="M278.944 17.577c-5.568-2.656-12.128-1.952-16.928 1.92L106.368 144.009H32c-17.632 0-32 14.368-32 32v128c0 17.664 14.368 32 32 32h74.368l155.616 124.512c2.912 2.304 6.464 3.488 10.016 3.488 2.368 0 4.736-.544 6.944-1.6 5.536-2.656 9.056-8.256 9.056-14.4v-416c0-6.144-3.52-11.744-9.056-14.432zM368.992 126.857c-6.304-6.208-16.416-6.112-22.624.128-6.208 6.304-6.144 16.416.128 22.656C370.688 173.513 384 205.609 384 240.009s-13.312 66.496-37.504 90.368c-6.272 6.176-6.336 16.32-.128 22.624 3.136 3.168 7.264 4.736 11.36 4.736 4.064 0 8.128-1.536 11.264-4.64C399.328 323.241 416 283.049 416 240.009s-16.672-83.232-47.008-113.152z"></path><path fill="#fff" d="M414.144 81.769c-6.304-6.24-16.416-6.176-22.656.096-6.208 6.272-6.144 16.416.096 22.624C427.968 140.553 448 188.681 448 240.009s-20.032 99.424-56.416 135.488c-6.24 6.24-6.304 16.384-.096 22.656 3.168 3.136 7.264 4.704 11.36 4.704 4.064 0 8.16-1.536 11.296-4.64C456.64 356.137 480 299.945 480 240.009s-23.36-116.128-65.856-158.24z"></path></svg></div></div><div id="soundOffBtn" style="width: 20px; height: 20px; bottom: 0px; position: absolute; cursor: pointer; display: flex; justify-content: center; user-select: none; -webkit-tap-highlight-color: transparent; pointer-events: auto;"><div id="soundOffBtnIco" style="width: 60%; filter: drop-shadow(rgba(0, 0, 0, 0.6) 0px 0px 2px); user-select: none; -webkit-tap-highlight-color: transparent; pointer-events: auto;"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="width:100%; height:100%; cursor:pointer;" enable-background="new 0 0 512 512" viewBox="0 0 512 512"><path fill="#fff" d="M445.9 256l61.7-61.7c5.9-5.9 5.9-15.4 0-21.2-5.9-5.9-15.4-5.9-21.2 0l-61.7 61.7-61.7-61.7c-5.9-5.9-15.4-5.9-21.2 0-5.9 5.9-5.9 15.4 0 21.2l61.7 61.7-61.7 61.7c-5.9 5.9-5.9 15.4 0 21.2 2.9 2.9 6.8 4.4 10.6 4.4s7.7-1.5 10.6-4.4l61.7-61.7 61.7 61.7c2.9 2.9 6.8 4.4 10.6 4.4s7.7-1.5 10.6-4.4c5.9-5.9 5.9-15.4 0-21.2L445.9 256zM278.9 33.6c-5.6-2.7-12.1-2-16.9 1.9L106.4 160H32c-17.6 0-32 14.4-32 32v128c0 17.7 14.4 32 32 32h74.4L262 476.5c2.9 2.3 6.5 3.5 10 3.5 2.4 0 4.7-.5 6.9-1.6 5.5-2.7 9.1-8.3 9.1-14.4V48c0-6.1-3.5-11.7-9.1-14.4z"></path></svg></div></div></div><div id="playBtn" style="visibility: visible; width: 20px; height: 20px; bottom: 11px; left: 12px; position: absolute; z-index: 1; cursor: pointer; display: flex; justify-content: center; user-select: none; -webkit-tap-highlight-color: transparent; pointer-events: auto;"><div id="playBtnIcon" style="width: 52%; filter: drop-shadow(rgba(0, 0, 0, 0.6) 0px 0px 2px); user-select: none; -webkit-tap-highlight-color: transparent; pointer-events: auto;"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="width:100%; height:100%; display:block; cursor:pointer;" enable-background="new 0 0 494.148 494.148" viewBox="0 0 494.148 494.148"><path fill="#fff" d="M405.284 201.188L130.804 13.28C118.128 4.596 105.356 0 94.74 0 74.216 0 61.52 16.472 61.52 44.044v406.124c0 27.54 12.68 43.98 33.156 43.98 10.632 0 23.2-4.6 35.904-13.308l274.608-187.904c17.66-12.104 27.44-28.392 27.44-45.884.004-17.48-9.664-33.764-27.344-45.864z"></path></svg></div></div><div id="pauseBtn" style="visibility: visible; width: 20px; height: 20px; bottom: 11px; left: 12px; position: absolute; z-index: 1; cursor: pointer; display: flex; justify-content: center; user-select: none; -webkit-tap-highlight-color: transparent; pointer-events: auto;"><div id="pauseBtnIcon" style="width: 60%; filter: drop-shadow(rgba(0, 0, 0, 0.6) 0px 0px 2px); user-select: none; -webkit-tap-highlight-color: transparent; pointer-events: auto;"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="width:100%; height:100%; cursor:pointer;" enable-background="new 0 0 493.528 493.528" viewBox="0 0 493.528 493.528"><path fill="#fff" d="M178.064 0L166.04.248c-14.876 0-27.236 12.112-27.236 26.992v439.664c0 14.876 13.396 26.624 28.272 26.624h.084l10.976-.072c14.892 0 26.22-11.92 26.22-26.808V26.996C204.352 12.116 193.028 0 178.064 0zM328.584 0l-12.092.248c-14.88 0-27.3 12.112-27.3 26.992v439.664c0 14.876 13.708 26.624 28.58 26.624h.084l10.816-.072c14.88 0 26.052-11.92 26.052-26.808V26.996C354.72 12.116 343.548 0 328.584 0z"></path></svg></div></div></div><div id="ad_label_element" style="display: flex; position: absolute; top: 12px; right: 12px; user-select: none; -webkit-tap-highlight-color: transparent; pointer-events: auto;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 20 15" fill="none"><path d="M8.15078 9.83787H5.24078L4.74078 11.2835H3.55078L6.04078 4.19794H7.36078L9.85078 11.2835H8.65078L8.15078 9.83787ZM7.83078 8.8911L6.70078 5.60283L5.56078 8.8911H7.83078Z" fill="white" fill-opacity="0.5"></path><path d="M10.2534 8.45334C10.2534 7.89003 10.3668 7.39119 10.5934 6.95682C10.8268 6.52246 11.1401 6.18651 11.5334 5.94896C11.9334 5.70464 12.3768 5.58247 12.8634 5.58247C13.2234 5.58247 13.5768 5.66391 13.9234 5.8268C14.2768 5.9829 14.5568 6.19329 14.7634 6.45798V3.75H15.9134V11.2835H14.7634V10.4385C14.5768 10.71 14.3168 10.934 13.9834 11.1104C13.6568 11.2869 13.2801 11.3751 12.8534 11.3751C12.3734 11.3751 11.9334 11.2529 11.5334 11.0086C11.1401 10.7575 10.8268 10.4114 10.5934 9.97022C10.3668 9.52228 10.2534 9.01666 10.2534 8.45334ZM14.7634 8.4737C14.7634 8.08685 14.6834 7.75089 14.5234 7.46584C14.3701 7.18079 14.1668 6.96361 13.9134 6.8143C13.6601 6.66499 13.3868 6.59033 13.0934 6.59033C12.8001 6.59033 12.5268 6.66499 12.2734 6.8143C12.0201 6.95682 11.8134 7.17061 11.6534 7.45566C11.5001 7.73393 11.4234 8.06649 11.4234 8.45334C11.4234 8.8402 11.5001 9.17954 11.6534 9.47138C11.8134 9.76322 12.0201 9.98719 12.2734 10.1433C12.5334 10.2926 12.8068 10.3673 13.0934 10.3673C13.3868 10.3673 13.6601 10.2926 13.9134 10.1433C14.1668 9.99397 14.3701 9.77679 14.5234 9.49174C14.6834 9.1999 14.7634 8.86056 14.7634 8.4737Z" fill="white" fill-opacity="0.5"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M1 0C0.447715 0 0 0.447715 0 1V14C0 14.5523 0.447715 15 1 15H19C19.5523 15 20 14.5523 20 14V1C20 0.447715 19.5523 0 19 0H1ZM10.5938 6.95682C10.3671 7.39119 10.2538 7.89003 10.2538 8.45334C10.2538 9.01666 10.3671 9.52228 10.5938 9.97022C10.8271 10.4114 11.1405 10.7575 11.5338 11.0086C11.9338 11.2529 12.3738 11.3751 12.8538 11.3751C13.2805 11.3751 13.6571 11.2869 13.9838 11.1104C14.3171 10.934 14.5771 10.71 14.7638 10.4385V11.2835H15.9138V3.75H14.7638V6.45798C14.5571 6.19329 14.2771 5.9829 13.9238 5.8268C13.5771 5.66391 13.2238 5.58247 12.8638 5.58247C12.3771 5.58247 11.9338 5.70464 11.5338 5.94896C11.1405 6.18651 10.8271 6.52246 10.5938 6.95682ZM14.5238 7.46584C14.6838 7.75089 14.7638 8.08685 14.7638 8.4737C14.7638 8.86056 14.6838 9.1999 14.5238 9.49174C14.3705 9.77679 14.1671 9.99397 13.9138 10.1433C13.6605 10.2926 13.3871 10.3673 13.0938 10.3673C12.8071 10.3673 12.5338 10.2926 12.2738 10.1433C12.0205 9.98719 11.8138 9.76322 11.6538 9.47138C11.5005 9.17954 11.4238 8.8402 11.4238 8.45334C11.4238 8.06649 11.5005 7.73393 11.6538 7.45566C11.8138 7.17061 12.0205 6.95682 12.2738 6.8143C12.5271 6.66499 12.8005 6.59033 13.0938 6.59033C13.3871 6.59033 13.6605 6.66499 13.9138 6.8143C14.1671 6.96361 14.3705 7.18079 14.5238 7.46584ZM5.24114 9.83788H8.15114L8.65114 11.2835H9.85114L7.36114 4.19794H6.04114L3.55114 11.2835H4.74114L5.24114 9.83788ZM6.70114 5.60283L7.83114 8.8911H5.56114L6.70114 5.60283Z" fill="black" fill-opacity="0.56"></path><mask id="path-3-inside-1_1950_1685" fill="white"><path d="M0 1C0 0.447715 0.447715 0 1 0H19C19.5523 0 20 0.447715 20 1V14C20 14.5523 19.5523 15 19 15H1C0.447715 15 0 14.5523 0 14V1Z"></path></mask><path d="M1 0.4H19V-0.4H1V0.4ZM19.6 1V14H20.4V1H19.6ZM19 14.6H1V15.4H19V14.6ZM0.4 14V1H-0.4V14H0.4ZM1 14.6C0.668629 14.6 0.4 14.3314 0.4 14H-0.4C-0.4 14.7732 0.226802 15.4 1 15.4V14.6ZM19.6 14C19.6 14.3314 19.3314 14.6 19 14.6V15.4C19.7732 15.4 20.4 14.7732 20.4 14H19.6ZM19 0.4C19.3314 0.4 19.6 0.668629 19.6 1H20.4C20.4 0.226801 19.7732 -0.4 19 -0.4V0.4ZM1 -0.4C0.226801 -0.4 -0.4 0.226801 -0.4 1H0.4C0.4 0.668629 0.668629 0.4 1 0.4V-0.4Z" fill="black" fill-opacity="0.24" mask="url(#path-3-inside-1_1950_1685)"></path></svg></div></div><div id="dcAdCover" style="position: absolute; top: 0px; left: 0px; z-index: 200; cursor: pointer; width: 100%; height: 100%; display: none; visibility: visible; pointer-events: auto;"></div></div><div id="adBreakDiv" style="width: 100%; height: 100%; position: absolute; display: block; z-index: 4; top: 0px; left: 0px; cursor: pointer;"><div id="adBreakPreloader" style="display: block;"></div></div></div><div id="pixelsDiv" style="width: 0px; height: 0px;"><img src="https://pl.primis.tech/live/liveView.php?hash=ozcmPTEznXRiPTEzqzyxX2V2ZW50PTUjJaNypaZypyRcoWU9MTp2MTY4MmQ1MSZ2nWRspGkurWVlVzVlPTMhMS4jJaM9MTE5MDI2JaN0YT0jJat9NDAjJax9MwplJaZcZF9jYXNmRG9gYWyhPW15nG9wn2V5pzFhn2yhZ3MhY29gJaN1YxyxPW15nG9wn2V5pzFhn2yhZ3MhY29gJzRyYaVaSW5zo3JgYXRco249QUJUJTIjJTJGJTIjo3ByoyuQoGFwZW1yoaQyMwAyMxYyMwAkJTIjJTJGJTIjMSZcp0FjpD0jJaNxn3Y9JaJcPTZDNwx3NwY1NTM3NDYkNmQ3MmqDNmM2QwMkN0I1NDMjN0Q3QwY0MmImMDMlMmUlRDMkMmAlRDMlMmt1RwMlMmI3RDqCNmMmMTM3MmImNwM2MmEmNTM0N0Q3QwQmMmMmMDqEN0I1MmYlNTt2QmZGNwImMwRFNmI1QTU4NxM3OTU5NTpmNTplNwE1NmM1NxU2Mmp5MmU2QTYlMmImMDNEN0Q3QwYlNwM2ODplNxY2RDY1N0Q3QwpkNwQ2NTpmNxI3NDZGNmA3RDqCNxY2QmY5NxU3NTp4N0Q3QwU4MmQmMDMjN0Q3QwU5MmImNmMlN0Q3QwY2MmE3RDqCNmI1MTU1NEE1NTQ5NDMmODY3NwImMmQlNxM2MwZDNwt1MTYlNDp0NwZBNUE1NmMkNxM2MwZFNTE2NmRDNmx0MTp4NDx0MmM4Nwp0RDUkM0QmRDqEN0I0QmMlMmAmNwMjMmQ3REZFRxUzZGyunWQ9JzN1ZGx9pGyjLU1UpGkMq0U0TxM0oE1URWuNVFxkJaVmZXJVQT1No3ccoGkuJTJGNS4jJTIjJTI4WDEkJTNCJTIjTGyhqXtyMwB4ODZsNwQyMwxyMwBBpHBfZVqyYxgcqCUlRwUmNl4mNvUlMCUlOEgIVE1MJTJDJTIjoGyeZSUlMEqyY2giJTI5JTIjSGVuZGkyp3NDnHJioWUyMxYkNDEhMC43MmxjLwM3JTIjU2FzYXJcJTJGNTM3LwM2JzNmqXVcZD02OTAkMwqzYwQ4ODNxJzNioaRyoaRGnWkySWQ9MCZgZWRcYVBfYXyMnXN0SWQ9MCZgZWRcYUkcp3RJZD0jJzqxpHI9MCZaZHBlQ29hp2VhqD0znXNXZVBup3NHZHBlPTEzY2NjYT0kJzNwpGFDo25mZW50PTFOTv0zY2J1p3Rypw0kNmYkNwtmNDUlMDQ3JaVcZD1TZWgcozRiU1BfYXyypwY5MDElN2ZvNmp3NWMzpHVvVXJfPWu0qHBmJTNBJTJGJTJGoXybo2NeZXylYW5enW5apl5wo20yMxZxnXZcp2yiov1cozZiJTNGZCUmRDE2NwUyMwZ5JTNEMwAlNSZzoG9uqFN0YXR1pm1zYWkmZSZynWRmpD1cnXEzpHucZD04NDYlMDJwM2E4NGIlOGE5ZwI0NTM4MDU0ODQjZTI2Zt==" height="0px" width="0px" style="display: none !important;"><div><iframe sandbox="allow-scripts allow-same-origin" id="e7600ba133747" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="https://ads.pubmatic.com/AdServer/js/user_sync.html?p=159196&amp;userIdMacro=PM_UID&amp;gdpr=0&amp;gdpr_consent=&amp;predirect=https%3A%2F%2Flive.primis.tech%2Flive%2FliveCS.php%3Fsource%3Dexternal%26advId%3D91%26advUuid%3DPM_UID%26gdpr%3D0%26gdpr_consent%3D">
+    </iframe></div><div><iframe sandbox="allow-scripts allow-same-origin" id="da3b3946e12998" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="https://u.openx.net/w/1.0/cm?gdpr=0&amp;gdpr_consent=&amp;id=476b50d3-5ccf-49a1-89b8-1ddf8ea18042&amp;r=https%3A%2F%2Flive.primis.tech%2Flive%2FliveCS.php%3Fsource%3Dexternal%26gdpr%3D0%26gdpr_consent%3D%26advId%3D98%26advUuid%3D">
+    </iframe></div><div><iframe sandbox="allow-scripts allow-same-origin" id="7525ba90fd2dd8" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="https://cs-server-s2s.yellowblue.io/sync-iframe?gdpr=0&amp;gdpr_consent=&amp;us_privacy=1NN-&amp;redirect=https%3A%2F%2Flive.primis.tech%2Flive%2FliveCS.php%3Fsource%3Dexternal%26advId%3D150%26advUuid%3D%7BpartnerId%7D%26gdpr%3D0%26gdpr_consent%3D">
+    </iframe></div><img src="https://pl.primis.tech/live/liveView.php?hash=ozcmPTEznXRiPTEzqzyxX2V2ZW50PTM2JaNypaZypyRcoWU9MTp2MTY4MmQ1MSZ2nWRspGkurWVlVzVlPTMhMS4jJaM9MTE5MDI2JaN0YT0jJat9NDAjJax9MwplJaZcZF9jYXNmRG9gYWyhPW15nG9wn2V5pzFhn2yhZ3MhY29gJaN1YxyxPW15nG9wn2V5pzFhn2yhZ3MhY29gJzRyYaVaSW5zo3JgYXRco249QUJUJTIjJTJGJTIjo3ByoyuQoGFwZW1yoaQyMwAyMxYyMwAkJTIjJTJGJTIjMSZcp0FjpD0jJaNxn3Y9JzN1ZGx9pGyjLU1UpGkMq0U0TxM0oE1URWuNVFxkJaVmZXJVQT1No3ccoGkuJTJGNS4jJTIjJTI4WDEkJTNCJTIjTGyhqXtyMwB4ODZsNwQyMwxyMwBBpHBfZVqyYxgcqCUlRwUmNl4mNvUlMCUlOEgIVE1MJTJDJTIjoGyeZSUlMEqyY2giJTI5JTIjSGVuZGkyp3NDnHJioWUyMxYkNDEhMC43MmxjLwM3JTIjU2FzYXJcJTJGNTM3LwM2JzNmqXVcZD02OTAkMwqzYwQ4ODNxJzNioaRyoaRGnWkySWQ9MCZgZWRcYVBfYXyMnXN0SWQ9MCZgZWRcYUkcp3RJZD0jJzqxpHI9MCZaZHBlQ29hp2VhqD0znXNXZVBup3NHZHBlPTEzY2NjYT0kJzNwpGFDo25mZW50PTFOTv0zY2J1p3Rypw0kNmYkNwtmNDU0MmQ5JaVcZD1TZWgcozRiU1BfYXyypwY5MDElN2ZvNmp3NWMzpHVvVXJfPWu0qHBmJTNBJTJGJTJGoXybo2NeZXylYW5enW5apl5wo20yMxZxnXZcp2yiov1cozZiJTNGZCUmRDE2NwUyMwZ5JTNEMwAlNSZzoG9uqFN0YXR1pm1zYWkmZSZynWRmpD1cnXEzpHucZD02ZWRvODtkN2YmNWNxMmJvNmI3YmM0NwVvNWVuODuzOQ==" height="0px" width="0px" style="display: none !important;"><img src="https://pl.primis.tech/live/liveView.php?hash=ozcmPTEznXRiPTEzqzyxX2V2ZW50PTI1JaNypaZypyRcoWU9MTp2MTY4MmQ1MSZ2nWRspGkurWVlVzVlPTMhMS4jJaM9MTE5MDI2JaN0YT0jJat9NDAjJax9MwplJaZcZF9jYXNmRG9gYWyhPW15nG9wn2V5pzFhn2yhZ3MhY29gJaN1YxyxPW15nG9wn2V5pzFhn2yhZ3MhY29gJzRyYaVaSW5zo3JgYXRco249QUJUJTIjJTJGJTIjo3ByoyuQoGFwZW1yoaQyMwAyMxYyMwAkJTIjJTJGJTIjMSZcp0FjpD0jJaNxn3Y9JzN1ZGx9pGyjLU1UpGkMq0U0TxM0oE1URWuNVFxkJaVmZXJVQT1No3ccoGkuJTJGNS4jJTIjJTI4WDEkJTNCJTIjTGyhqXtyMwB4ODZsNwQyMwxyMwBBpHBfZVqyYxgcqCUlRwUmNl4mNvUlMCUlOEgIVE1MJTJDJTIjoGyeZSUlMEqyY2giJTI5JTIjSGVuZGkyp3NDnHJioWUyMxYkNDEhMC43MmxjLwM3JTIjU2FzYXJcJTJGNTM3LwM2JzNmqXVcZD02OTAkMwqzYwQ4ODNxJzNioaRyoaRGnWkySWQ9MCZgZWRcYVBfYXyMnXN0SWQ9MCZgZWRcYUkcp3RJZD0jJzR1pw04MDAzZ2Rjpw0jJzqxpHJDo25mZW50PSZcp1qyUGFmp0qxpHI9MSZwY3BuPTEzY2NjYUNioaNyoaQ9MU5OLSZwYaVmqGVlPTE3NwE2ODM0NwAjNmIzqWyxPVNyn2yhZG9TUGkurWVlNwxjMTI3ZzI3Nmp1YlZjqWJVpzj9nHR0pHMyM0EyMxYyMxZgrWuiY2gyrXJuozgcozqmLzNioSUlRzRcqzymnW9hLWyhZz8yM0ZxJTNEMTY2NSUlNaxyM0QlMDI1JzZfo2F0U3RuqHVmPWZuoHNyJzVcZHNjPWycpSZjrGyxPTt2ZGYjYwMlMDVwYTY2OGMjNGRzNwBvNDI4ODx5NDAk" height="0px" width="0px" style="display: none !important;"><img src="https://pl.primis.tech/live/liveView.php?hash=ozcmPTEznXRiPTEzqzyxX2V2ZW50PTQlJaNypaZypyRcoWU9MTp2MTY4MmQ1MSZ2nWRspGkurWVlVzVlPTMhMS4jJaM9MTE5MDI2JaN0YT0jJat9NDAjJax9MwplJaZcZF9jYXNmRG9gYWyhPW15nG9wn2V5pzFhn2yhZ3MhY29gJaN1YxyxPW15nG9wn2V5pzFhn2yhZ3MhY29gJzRyYaVaSW5zo3JgYXRco249QUJUJTIjJTJGJTIjo3ByoyuQoGFwZW1yoaQyMwAyMxYyMwAkJTIjJTJGJTIjMSZcp0FjpD0jJaNxn3Y9JzN1ZGx9pGyjLU1UpGkMq0U0TxM0oE1URWuNVFxkJaVmZXJVQT1No3ccoGkuJTJGNS4jJTIjJTI4WDEkJTNCJTIjTGyhqXtyMwB4ODZsNwQyMwxyMwBBpHBfZVqyYxgcqCUlRwUmNl4mNvUlMCUlOEgIVE1MJTJDJTIjoGyeZSUlMEqyY2giJTI5JTIjSGVuZGkyp3NDnHJioWUyMxYkNDEhMC43MmxjLwM3JTIjU2FzYXJcJTJGNTM3LwM2JzNmqXVcZD02OTAkMwqzYwQ4ODNxJzNioaRyoaRGnWkySWQ9MCZgZWRcYVBfYXyMnXN0SWQ9MCZgZWRcYUkcp3RJZD0jJzR1pw04MDAzZ2Rjpw0jJzqxpHJDo25mZW50PSZcp1qyUGFmp0qxpHI9MSZwY3BuPTEzY2NjYUNioaNyoaQ9MU5OLSZwYaVmqGVlPTE3NwE2ODM0NwAkMwIzqWyxPVNyn2yhZG9TUGkurWVlNwxjMTI3ZzI3Nmp1YlZjqWJVpzj9nHR0pHMyM0EyMxYyMxZgrWuiY2gyrXJuozgcozqmLzNioSUlRzRcqzymnW9hLWyhZz8yM0ZxJTNEMTY2NSUlNaxyM0QlMDI1JzZfo2F0U3RuqHVmPWZuoHNyJzVcZHNjPWycpSZjrGyxPWNvOGI0YTx5MmM2YwVuNDp3MGY0Mmp5YmxmMwAjYTp4" height="0px" width="0px" style="display: none !important;"><img src="https://pl.primis.tech/live/liveView.php?hash=ozcmPTEznXRiPTEzqzyxX2V2ZW50PTYzp2VlqzVlVGygZT0kNmYkNwtmNDUlJaZcZF9joGF5ZXJWZXI9Ml4kLwAzpm01ODA1NlZmqGE9MTplNwIkMTYzrD0mMDAzrT0kNwxzoXN0YT0kNmI2NwE1NCZ2nWRsqzFmqFR5pGU9MlZ2nWRsqzyyq2FvnWkcqHyTqGF0ZT0kJaZcZF9jYXNmRG9gYWyhPW15nG9wn2V5pzFhn2yhZ3MhY29gJaN1YxyxPW15nG9wn2V5pzFhn2yhZ3MhY29gJzRyYaVaSW5zo3JgYXRco249QUJUJTIjJTJGJTIjo3ByoyuQoGFwZW1yoaQyMwAyMxYyMwAkJTIjJTJGJTIjMSZcp0FjpD0jJzN1ZGx9pGyjLU1UpGkMq0U0TxM0oE1URWuNVFxkJaVmZXJVQT1No3ccoGkuJTJGNS4jJTIjJTI4WDEkJTNCJTIjTGyhqXtyMwB4ODZsNwQyMwxyMwBBpHBfZVqyYxgcqCUlRwUmNl4mNvUlMCUlOEgIVE1MJTJDJTIjoGyeZSUlMEqyY2giJTI5JTIjSGVuZGkyp3NDnHJioWUyMxYkNDEhMC43MmxjLwM3JTIjU2FzYXJcJTJGNTM3LwM2JzNmqXVcZD02OTAkMwqzYwQ4ODNxJaJ2ow0xr1ZQX1JWTy9NQUNST30zYXR0ZW1jqE11oHRcpGkcZXI9MwAzY29hqGVhqEZcoGVJZD0jJz1yZGyuUGkurUkcp3RJZD0jJz1yZGyuTGymqEyxPTAzpGkuY2VgZW50U3RlZWFgVHyjZT01JaNmpF9cqXM9MCZaZHBlPTAzZ2RjpxNioaNyoaQ9JzymV2VQYXNmR2Rjpw0kJzNwpGE9MSZwY3BuQ29hp2VhqD0kTx4gJzNvqXN0ZXI9MTp2MTY4MmQ2MTYkMlZ1nWQ9U2VenW5xo1NQoGF5ZXI2OTAkMwqzYwp3NmVwJaB1YyVloD1bqHRjplUmQSUlRvUlRz15nG9wn2V5pzFhn2yhZ3MhY29gJTJGZGy2nXNco24gnW5zolUmRzQyM0QkNwY1JTI2rSUmRDIjMwUzZzkiYXRTqGF0qXM9ZzFfp2UzZWyxp3A9nWykJaB4nWQ9YwY3MGU3ZwJxMzVxZwEkMTZxOTuxYwQ2MWUmZzNzNGU=" height="0px" width="0px" style="display: none !important;"><img src="https://pl.primis.tech/live/liveView.php?hash=ozcmPTEznXRiPTEzqzyxX2V2ZW50PTYzp2VlqzVlVGygZT0kNmYkNwtmNDUlJaZcZF9joGF5ZXJWZXI9Ml4kLwAzpm01ODA1NlZmqGE9MTplNwI3OTxzrD0mMDAzrT0kNwxzoXN0YT0kNmI2NwE1NCZ2nWRsqzFmqFR5pGU9MlZ2nWRsqzyyq2FvnWkcqHyTqGF0ZT0kJaZcZF9jYXNmRG9gYWyhPW15nG9wn2V5pzFhn2yhZ3MhY29gJaN1YxyxPW15nG9wn2V5pzFhn2yhZ3MhY29gJzRyYaVaSW5zo3JgYXRco249QUJUJTIjJTJGJTIjo3ByoyuQoGFwZW1yoaQyMwAyMxYyMwAkJTIjJTJGJTIjMSZcp0FjpD0jJzN1ZGx9pGyjLU1UpGkMq0U0TxM0oE1URWuNVFxkJaVmZXJVQT1No3ccoGkuJTJGNS4jJTIjJTI4WDEkJTNCJTIjTGyhqXtyMwB4ODZsNwQyMwxyMwBBpHBfZVqyYxgcqCUlRwUmNl4mNvUlMCUlOEgIVE1MJTJDJTIjoGyeZSUlMEqyY2giJTI5JTIjSGVuZGkyp3NDnHJioWUyMxYkNDEhMC43MmxjLwM3JTIjU2FzYXJcJTJGNTM3LwM2JzNmqXVcZD02OTAkMwqzYwQ4ODNxJaJ2ow0xr1ZQX1JWTy9NQUNST30zYXR0ZW1jqE11oHRcpGkcZXI9MwAzY29hqGVhqEZcoGVJZD0jJz1yZGyuUGkurUkcp3RJZD0jJz1yZGyuTGymqEyxPTAzpGkuY2VgZW50U3RlZWFgVHyjZT01JzqxpHI9MCZaZHBlQ29hp2VhqD0znXNXZVBup3NHZHBlPTEzY2NjYT0kJzNwpGFDo25mZW50PTFOTv0zY2J1p3Rypw0kNmYkNwtmNDYkNwE0JaVcZD1TZWgcozRiU1BfYXyypwY5MDElN2ZvNmp3NWMzpHVvVXJfPWu0qHBmJTNBJTJGJTJGoXybo2NeZXylYW5enW5apl5wo20yMxZxnXZcp2yiov1cozZiJTNGZCUmRDE2NwUyMwZ5JTNEMwAlNSZzoG9uqFN0YXR1pm1zYWkmZSZynWRmpD1cnXEzpHucZD0mYTFxZTJuNmY0YTRzYwZxYWI2NTY5ZWY1NTJyYTYjNQ==" height="0px" width="0px" style="display: none !important;"></div></div></div></div></div></div></div><script src="https://live.primis.tech/live/liveView.php?s=119026&amp;cbuster=1761683451&amp;pubUrl=https%3A%2F%2Fmyhockeyrankings.com%2Fdivision-info%3Fd%3D1665%26y%3D2025&amp;x=400&amp;y=272&amp;playerApiId=freestarPrimisPlayer&amp;schain=1.0,1!freestar.com,998,1" async="" type="text/javascript" id="freestarPrimisScript"></script><iframe src="https://www.google.com/recaptcha/api2/aframe" width="0" height="0" style="display: none;"></iframe><script src="https://a.ad.gt/api/v1/u/matches/474?_it=freestar"></script><img height="1" width="1" src="https://ids.ad.gt/api/v1/halo_match?id=AU1D-0100-001761683452-BVRLYO00-68HB&amp;halo_id=060niej7ijk8bhju6a65989e9f9d9d9f9994vnw2uwz4gswi0e0y646m6o6k6k6o6" alt="" style="display: none;"><img height="1" width="1" src="https://ids4.ad.gt/api/v1/ip_match?id=AU1D-0100-001761683452-BVRLYO00-68HB" alt="" style="display: none;"><img height="1" width="1" src="https://secure.adnxs.com/getuid?https://ids.ad.gt/api/v1/match?id=AU1D-0100-001761683452-BVRLYO00-68HB&amp;adnxs_id=$UID&amp;gdpr=0" alt="" style="display: none;"><img height="1" width="1" src="https://u.openx.net/w/1.0/cm?id=998eaf06-9905-4eae-9e26-9fac75960c53&amp;r=https%3A%2F%2Fids.ad.gt%2Fapi%2Fv1%2Fopenx%3Fopenx_id%3D%7BOPENX_ID%7D%26id%3DAU1D-0100-001761683452-BVRLYO00-68HB%26auid%3DAU1D-0100-001761683452-BVRLYO00-68HB&amp;gdpr=0" alt="" style="display: none;"><img height="1" width="1" src="https://image2.pubmatic.com/AdServer/UCookieSetPug?rd=https%3A%2F%2Fids.ad.gt%2Fapi%2Fv1%2Fpbm_match%3Fpbm%3D%23PM_USER_ID%26id%3DAU1D-0100-001761683452-BVRLYO00-68HB&amp;gdpr=0" alt="" style="display: none;"><img height="1" width="1" src="https://token.rubiconproject.com/token?pid=50242&amp;puid=AU1D-0100-001761683452-BVRLYO00-68HB&amp;gdpr=0" alt="" style="display: none;"><img height="1" width="1" src="https://match.adsrvr.org/track/cmf/generic?ttd_pid=8gkxb6n&amp;ttd_tpi=1&amp;ttd_puid=AU1D-0100-001761683452-BVRLYO00-68HB&amp;gdpr=0" alt="" style="display: none;"><img height="1" width="1" src="https://pixel.tapad.com/idsync/ex/receive?partner_id=3185&amp;partner_device_id=AU1D-0100-001761683452-BVRLYO00-68HB&amp;partner_url=https://ids.ad.gt%2Fapi%2Fv1%2Ftapad_match%3Fid%3DAU1D-0100-001761683452-BVRLYO00-68HB%26tapad_id%3D%24%7BTA_DEVICE_ID%7D&amp;gdpr=0" alt="" style="display: none;"><img height="1" width="1" src="https://cm.g.doubleclick.net/pixel?google_nid=audigent_dmp&amp;google_hm=QVUxRC0wMTAwLTAwMTc2MTY4MzQ1Mi1CVlJMWU8wMC02OEhC&amp;google_redir=https%3A%2F%2Fids.ad.gt%2Fapi%2Fv1%2Fg_match&amp;id=AU1D-0100-001761683452-BVRLYO00-68HB&amp;gdpr=0" alt="" style="display: none;"><img height="1" width="1" src="https://d.turn.com/r/dd/id/L2NzaWQvMS9jaWQvMTc0ODI0MTY1OC90LzA/url/https%3A%2F%2Fids.ad.gt%2Fapi%2Fv1%2Famo_match%3Fturn_id%3D%24!{TURN_UUID}%26id%3DAU1D-0100-001761683452-BVRLYO00-68HB" alt="" style="display: none;"><img height="1" width="1" src="https://sync.go.sonobi.com/us?https://ids.ad.gt/api/v1/son_match?id=AU1D-0100-001761683452-BVRLYO00-68HB&amp;uid=[UID]&amp;gdpr=0" alt="" style="display: none;"><img height="1" width="1" src="https://ad.360yield.com/ux?&amp;publisher_dmp_id=15&amp;r=https%3A%2F%2Fids.ad.gt%2Fapi%2Fv1%2Fimpr_match%3Fid%3DAU1D-0100-001761683452-BVRLYO00-68HB%26impr_uid%3D%7BPUB_USER_ID%7D&amp;gdpr=0" alt="" style="display: none;"><link rel="stylesheet" type="text/css" href="https://live.primis.tech/content/video/css/primisslate.css"><iframe src="https://s.amazon-adsystem.com/iu3?cm3ppd=1&amp;d=dtb-pub&amp;csif=t&amp;gdpr=0&amp;dl=n-adobe3pb_n-index_rx_n-MediaNet_ox-db5_n-cadent_n-onetag_pm-db5_n-simpli.fi_ym_n-vmg_n-nativo_sovrn_gg_n-minuteMedia_n-adMediaV1_n-Ogury_n-Beeswax_smrt_n-inmobi_n-sharethrough_n-Seedtag_rbd_ppt_an-db5_n-Rise_3lift" style="display: none;"></iframe><script type="text/javascript" src="https://pixels.ad.gt/api/v1/getpixels?tagger_id=d53252d1c87b50f3d0fa6c3ed800e4ca&amp;url=https%3A%2F%2Fmyhockeyrankings.com%2Fdivision-info%3Fd%3D1665%26y%3D2025&amp;code='none'" async=""></script></body><iframe name="goog_topics_frame" src="https://securepubads.g.doubleclick.net/static/topics/topics_frame.html" style="display: none;"></iframe><iframe name="ifrm_pubmatic" src="https://ads.pubmatic.com/AdServer/js/topics/topics_frame.html?bidder=pubmatic" style="display: none;"></iframe><iframe name="ifrm_openx" src="https://pa.openx.net/topics_frame.html?bidder=openx" style="display: none;"></iframe><iframe sandbox="allow-scripts allow-same-origin" id="50f63be3169ba4c" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="https://hbx.media.net/checksync.php?cid=8CUEHS6F9&amp;cs=87&amp;type=mpbc&amp;cv=37&amp;vsSync=1&amp;uspstring=1---&amp;gdpr=0&amp;gdprstring=&amp;gpp=DBAA&amp;gpp_sid=&amp;redirect=https%3A%2F%2Fs2s.t13.io%2Fsetuid%3Fbidder%3Dmedianet%26gdpr%3D0%26gdpr_consent%3D%26us_privacy%3D1---%26gpp%3DDBAA%26gpp_sid%3D%26f%3Db%26uid%3D%3Cvsid%3E">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="51d9c57e10d44d68" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="https://ads.pubmatic.com/AdServer/js/user_sync.html?kdntuid=1&amp;p=156696&amp;us_privacy=1---">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="52c6d0174c237de8" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="https://ads.yieldmo.com/pbcas?us_privacy=1---&amp;gdpr=0&amp;gdpr_consent=&amp;type=iframe">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="53c70545b02046a8" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="https://eb2.3lift.com/sync?us_privacy=1---&amp;gpp=DBAA&amp;">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="5474312eebc8f998" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="https://freestar-d.openx.net/w/1.0/pd?us_privacy=1---">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="5561fcffa5919af" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="https://eus.rubiconproject.com/usync.html?us_privacy=1---&amp;gpp=DBAA&amp;gpp_sid=">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="56f46659c35704e" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="https://js-sec.indexww.com/um/ixmatch.html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="5712ab0d0e63c33" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="https://acdn.adnxs.com/dmp/async_usersync.html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="583c57d81def7cc8" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="https://usync.ingage.tech?gdpr=0&amp;gdpr_consent=&amp;us_privacy=1---&amp;redirect=https%3A%2F%2Fs2s.t13.io%2Fsetuid%3Fbidder%3Dinsticator%26gdpr%3D0%26gdpr_consent%3D%26us_privacy%3D1---%26gpp%3DDBAA%26gpp_sid%3D%26f%3Db%26uid%3D%24UID">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="593a38d3539a23a" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="https://ap.lijit.com/beacon/prebid-server/?gdpr=0&amp;gdpr_consent=&amp;us_privacy=1---&amp;gpp=DBAA&amp;gpp_sid=&amp;url=https%3A%2F%2Fs2s.t13.io%2Fsetuid%3Fbidder%3Dsovrn%26gdpr%3D0%26gdpr_consent%3D%26us_privacy%3D1---%26gpp%3DDBAA%26gpp_sid%3D%26f%3Db%26uid%3D%24UID">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="124ddcdbec56d5488" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="https://ssc-cms.33across.com/ps/?m=xch&amp;rt=html&amp;gdpr=0&amp;gdpr_consent=&amp;us_privacy=1---&amp;id=zzz000000000002zzz&amp;ru=https%3A%2F%2Fs2s.t13.io%2Fsetuid%3Fbidder%3D33across%26gdpr%3D0%26gdpr_consent%3D%26us_privacy%3D1---%26gpp%3DDBAA%26gpp_sid%3D%26f%3Db%26uid%3D33XUSERID33X">
+    </iframe></html>
