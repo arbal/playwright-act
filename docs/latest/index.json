@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "url": "http://example.org/",
+    "slug": "example-org",
+    "timestamp": "2025-10-29T10-23-12-530Z",
+    "html": "latest/example-org.html",
+    "text": "latest/example-org.txt"
+  }
+]
