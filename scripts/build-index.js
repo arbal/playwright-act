@@ -127,16 +127,19 @@ function buildLatestArtifacts(latestByUrl) {
     const slug = ensureUniqueSlug(slugifyUrl(url), usedSlugs);
     const htmlSource = path.join(snapshot.dirPath, 'page.html');
     const textSource = path.join(snapshot.dirPath, 'page.txt');
+    const metaSource = path.join(snapshot.dirPath, 'meta.json');
 
-    if (!fs.existsSync(htmlSource) || !fs.existsSync(textSource)) {
+    if (!fs.existsSync(htmlSource) || !fs.existsSync(textSource) || !fs.existsSync(metaSource)) {
       continue;
     }
 
     const htmlTarget = path.join(latestRoot, `${slug}.html`);
     const textTarget = path.join(latestRoot, `${slug}.txt`);
+    const metaTarget = path.join(latestRoot, `${slug}.meta.json`);
 
     fs.copyFileSync(htmlSource, htmlTarget);
     fs.copyFileSync(textSource, textTarget);
+    fs.copyFileSync(metaSource, metaTarget);
 
     indexEntries.push({
       url,
@@ -144,6 +147,7 @@ function buildLatestArtifacts(latestByUrl) {
       timestamp: snapshot.timestamp,
       html: `latest/${slug}.html`,
       text: `latest/${slug}.txt`,
+      meta: `latest/${slug}.meta.json`,
     });
   }
 
@@ -158,12 +162,12 @@ function writeIndexHtml(entries) {
 
   let tableRows = '';
   if (entries.length === 0) {
-    tableRows = '<tr><td colspan="4">No snapshots yet.</td></tr>';
+    tableRows = '<tr><td colspan="5">No snapshots yet.</td></tr>';
   } else {
     tableRows = entries
       .map(
         (entry) =>
-          `<tr>\n            <td><a href="${entry.url}">${entry.url}</a></td>\n            <td><code>${entry.timestamp}</code></td>\n            <td><a href="${entry.html}">Snapshot HTML</a></td>\n            <td><a href="${entry.text}">Snapshot text</a></td>\n          </tr>`
+          `<tr>\n            <td><a href="${entry.url}">${entry.url}</a></td>\n            <td><code>${entry.timestamp}</code></td>\n            <td><a href="${entry.html}">Snapshot HTML</a></td>\n            <td><a href="${entry.text}">Snapshot text</a></td>\n            <td><a href="${entry.meta}">Snapshot meta</a></td>\n          </tr>`
       )
       .join('\n');
   }
@@ -193,6 +197,7 @@ function writeIndexHtml(entries) {
           <th>Latest timestamp</th>
           <th>Snapshot HTML</th>
           <th>Snapshot text</th>
+          <th>Snapshot meta</th>
         </tr>
       </thead>
       <tbody>

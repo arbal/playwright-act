@@ -24,7 +24,8 @@ Once these steps complete you can repeatedly trigger the workflow to archive add
 archive/
   └── <timestamp>/
       ├── page.html   # Raw HTML returned by Chromium
-      └── page.txt    # Readable text with scripts/styles removed
+      ├── page.txt    # Readable text with scripts/styles removed
+      └── meta.json   # Metadata (URL, timestamp, HTTP status, etc.)
 .github/
   └── workflows/
       └── snapshot.yml
@@ -34,6 +35,20 @@ scripts/
 ```
 
 `archive/.gitkeep` ensures the archive directory exists before the first snapshot.
+
+Each captured URL is also published under `docs/latest/` so downstream consumers can fetch stable URLs hosted via GitHub Pages:
+
+```
+docs/
+  ├── index.html                # Human-friendly table of the latest snapshots
+  └── latest/
+      ├── <slug>.html           # Latest raw HTML snapshot for the URL
+      ├── <slug>.txt            # Latest cleaned text snapshot
+      ├── <slug>.meta.json      # Snapshot metadata (at minimum { "url", "timestamp" })
+      └── index.json            # Machine-readable listing (one entry per URL)
+```
+
+`docs/latest/index.json` now includes `meta` alongside `html` and `text`, pointing to the corresponding `.meta.json` file for each URL.
 
 ## Triggering snapshots
 

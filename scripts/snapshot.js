@@ -119,6 +119,7 @@ async function takeSnapshot(targetUrl, options = {}) {
     await waitForPageSettled(page, options);
 
     const html = await page.content();
+    const userAgent = await page.evaluate(() => navigator.userAgent);
     const textContent = await page.evaluate(() => {
       const root = document.body ? document.body.cloneNode(true) : document.documentElement.cloneNode(true);
       root.querySelectorAll('script, style, noscript').forEach((node) => node.remove());
@@ -133,11 +134,14 @@ async function takeSnapshot(targetUrl, options = {}) {
     const metaPath = path.join(snapshotDirPath, 'meta.json');
     fs.writeFileSync(htmlPath, html, 'utf8');
     fs.writeFileSync(textPath, textContent, 'utf8');
-    fs.writeFileSync(
-      metaPath,
-      `${JSON.stringify({ url: targetUrl, timestamp: snapshotDirName }, null, 2)}\n`,
-      'utf8'
-    );
+    const metadata = {
+      url: targetUrl,
+      timestamp: snapshotDirName,
+      status,
+      userAgent,
+      githubRunId: process.env.GITHUB_RUN_ID || null,
+    };
+    fs.writeFileSync(metaPath, `${JSON.stringify(metadata, null, 2)}\n`, 'utf8');
 
     return {
       snapshotDir: snapshotDirPath,
