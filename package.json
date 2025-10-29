@@ -1,0 +1,26 @@
+{
+  "name": "playwright-act",
+  "version": "1.0.0",
+  "description": "Automated webpage snapshot archiver using GitHub Actions and Playwright.",
+  "main": "scripts/snapshot.js",
+  "scripts": {
+    "snapshot": "node scripts/snapshot.js",
+    "pretest": "npx playwright install-deps chromium && npx playwright install chromium",
+    "test": "jest --runInBand",
+    "build-index": "node scripts/build-index.js"
+  },
+  "keywords": [
+    "playwright",
+    "archive",
+    "github-actions",
+    "snapshot"
+  ],
+  "author": "snapshot-bot",
+  "license": "MIT",
+  "dependencies": {
+    "playwright": "^1.42.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
