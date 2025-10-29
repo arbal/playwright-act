@@ -6,7 +6,8 @@
   "scripts": {
     "snapshot": "node scripts/snapshot.js",
     "pretest": "npx playwright install-deps chromium && npx playwright install chromium",
-    "test": "jest --runInBand"
+    "test": "jest --runInBand",
+    "build-index": "node scripts/build-index.js"
   },
   "keywords": [
     "playwright",

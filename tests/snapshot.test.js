@@ -40,6 +40,7 @@ describe('takeSnapshot', () => {
       const result = await takeSnapshot(`${url}/`, { archiveRoot: archiveDir, timestamp: '2024-01-01T00-00-00Z' });
       const savedHtml = fs.readFileSync(result.htmlPath, 'utf8');
       const savedText = fs.readFileSync(result.textPath, 'utf8');
+      const savedMeta = JSON.parse(fs.readFileSync(result.metaPath, 'utf8'));
 
       expect(savedHtml).toContain('<h1>Hello</h1>');
       expect(savedHtml).toContain('<p>World</p>');
@@ -47,6 +48,7 @@ describe('takeSnapshot', () => {
       expect(savedText).toContain('World');
       expect(savedText).not.toContain('console.log');
       expect(result.timestamp).toBe('2024-01-01T00-00-00Z');
+      expect(savedMeta).toEqual({ url: `${url}/`, timestamp: '2024-01-01T00-00-00Z' });
     } finally {
       server.close();
     }
@@ -76,6 +78,7 @@ describe('takeSnapshot', () => {
 
       expect(fs.existsSync(result.htmlPath)).toBe(true);
       expect(fs.existsSync(result.textPath)).toBe(true);
+      expect(fs.existsSync(result.metaPath)).toBe(true);
       expect(warnings.some((message) => message.includes('network idle'))).toBe(true);
     } finally {
       server.close();

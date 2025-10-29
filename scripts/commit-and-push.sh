@@ -12,10 +12,10 @@ fi
 git config user.name "snapshot-bot"
 git config user.email "snapshot-bot@users.noreply.github.com"
 
-git add archive
+git add archive docs
 
 if git diff --cached --quiet; then
-  echo "No changes detected in archive/. Nothing to commit."
+  echo "No changes detected in archive/ or docs/. Nothing to commit."
   exit 0
 fi
 

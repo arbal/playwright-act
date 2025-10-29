@@ -130,8 +130,14 @@ async function takeSnapshot(targetUrl, options = {}) {
 
     const htmlPath = path.join(snapshotDirPath, 'page.html');
     const textPath = path.join(snapshotDirPath, 'page.txt');
+    const metaPath = path.join(snapshotDirPath, 'meta.json');
     fs.writeFileSync(htmlPath, html, 'utf8');
     fs.writeFileSync(textPath, textContent, 'utf8');
+    fs.writeFileSync(
+      metaPath,
+      `${JSON.stringify({ url: targetUrl, timestamp: snapshotDirName }, null, 2)}\n`,
+      'utf8'
+    );
 
     return {
       snapshotDir: snapshotDirPath,
@@ -139,6 +145,7 @@ async function takeSnapshot(targetUrl, options = {}) {
       htmlPath,
       textPath,
       url: targetUrl,
+      metaPath,
     };
   } finally {
     if (browser) {
