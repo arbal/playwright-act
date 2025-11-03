@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
+const yaml = require('js-yaml');
 
 const archiveRoot = path.resolve(__dirname, '..', 'archive');
 const docsRoot = path.resolve(__dirname, '..', 'docs');
@@ -136,10 +137,16 @@ function buildLatestArtifacts(latestByUrl) {
     const htmlTarget = path.join(latestRoot, `${slug}.html`);
     const textTarget = path.join(latestRoot, `${slug}.txt`);
     const metaTarget = path.join(latestRoot, `${slug}.meta.json`);
+    const metaTextTarget = path.join(latestRoot, `${slug}.meta.txt`);
 
     fs.copyFileSync(htmlSource, htmlTarget);
     fs.copyFileSync(textSource, textTarget);
     fs.copyFileSync(metaSource, metaTarget);
+
+    const metaData = JSON.parse(fs.readFileSync(metaSource, 'utf8'));
+    const metaYaml = yaml.dump(metaData, { noRefs: true, lineWidth: 0 });
+    const normalizedMetaYaml = metaYaml.endsWith('\n') ? metaYaml : `${metaYaml}\n`;
+    fs.writeFileSync(metaTextTarget, normalizedMetaYaml, 'utf8');
 
     indexEntries.push({
       url,
@@ -148,6 +155,7 @@ function buildLatestArtifacts(latestByUrl) {
       html: `latest/${slug}.html`,
       text: `latest/${slug}.txt`,
       meta: `latest/${slug}.meta.json`,
+      meta_txt: `latest/${slug}.meta.txt`,
     });
   }
 
@@ -162,12 +170,12 @@ function writeIndexHtml(entries) {
 
   let tableRows = '';
   if (entries.length === 0) {
-    tableRows = '<tr><td colspan="5">No snapshots yet.</td></tr>';
+    tableRows = '<tr><td colspan="6">No snapshots yet.</td></tr>';
   } else {
     tableRows = entries
       .map(
         (entry) =>
-          `<tr>\n            <td><a href="${entry.url}">${entry.url}</a></td>\n            <td><code>${entry.timestamp}</code></td>\n            <td><a href="${entry.html}">Snapshot HTML</a></td>\n            <td><a href="${entry.text}">Snapshot text</a></td>\n            <td><a href="${entry.meta}">Snapshot meta</a></td>\n          </tr>`
+          `<tr>\n            <td><a href="${entry.url}">${entry.url}</a></td>\n            <td><code>${entry.timestamp}</code></td>\n            <td><a href="${entry.html}">Snapshot HTML</a></td>\n            <td><a href="${entry.text}">Snapshot text</a></td>\n            <td><a href="${entry.meta}">Snapshot meta</a></td>\n            <td><a href="${entry.meta_txt}">Snapshot meta (YAML)</a></td>\n          </tr>`
       )
       .join('\n');
   }
@@ -198,6 +206,7 @@ function writeIndexHtml(entries) {
           <th>Snapshot HTML</th>
           <th>Snapshot text</th>
           <th>Snapshot meta</th>
+          <th>Snapshot meta (YAML)</th>
         </tr>
       </thead>
       <tbody>

@@ -45,10 +45,11 @@ docs/
       ├── <slug>.html           # Latest raw HTML snapshot for the URL
       ├── <slug>.txt            # Latest cleaned text snapshot
       ├── <slug>.meta.json      # Snapshot metadata (at minimum { "url", "timestamp" })
+      ├── <slug>.meta.txt       # Same metadata rendered as YAML for easy reading
       └── index.json            # Machine-readable listing (one entry per URL)
 ```
 
-`docs/latest/index.json` now includes `meta` alongside `html` and `text`, pointing to the corresponding `.meta.json` file for each URL.
+`docs/latest/index.json` now includes `meta` (JSON metadata) and `meta_txt` (YAML metadata) alongside `html` and `text`, pointing to the corresponding files for each URL.
 
 ## Triggering snapshots
 
