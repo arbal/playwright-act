@@ -5,6 +5,7 @@
     "timestamp": "2025-10-29T12-41-46-069Z",
     "html": "latest/example-org.html",
     "text": "latest/example-org.txt",
-    "meta": "latest/example-org.meta.json"
+    "meta": "latest/example-org.meta.json",
+    "meta_txt": "latest/example-org.meta.txt"
   }
 ]
